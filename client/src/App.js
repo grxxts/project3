@@ -1,18 +1,16 @@
 import React from 'react';
 import './App.css';
-import TodoService from './services/TodoService';
-import TodoList from './components/TodoList/TodoList';
 import { Switch, Route } from 'react-router-dom';
 import Login from './components/Login/Login';
 import SignUp from './components/Signup/Signup';
 import AuthService from './services/AuthService';
+// aqui se rompe algo, mañana arreglar :S
 import PrivateRoute from './guards/PrivateRoute';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.todoService = new TodoService();
-    this.authService = new AuthService();
+    this.AuthService = new AuthService();
   }
 
   state = {
@@ -25,7 +23,7 @@ class App extends React.Component {
 
   fetchUser = () => {
     if (this.state.user === null) {
-      this.authService.loggedInUser()
+      this.AuthService.loggedInUser()
         .then(
           (user) => {
             this.setUser(user)
@@ -53,12 +51,11 @@ class App extends React.Component {
           {user && <Switch>
             <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />  
             <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
-            <PrivateRoute exact path="/" user={user} component={TodoList} />
           </Switch> }
           {!user && <Switch>
             <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />  
             <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
-            <PrivateRoute exact path="/" user={user} component={TodoList} />
+            <PrivateRoute exact path="/" user={user} />
           </Switch> }
         </header>
       </div>
