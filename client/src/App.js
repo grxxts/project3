@@ -4,8 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Login from './components/Login/Login';
 import SignUp from './components/Signup/Signup';
 import AuthService from './services/AuthService';
-// aqui se rompe algo, mañana arreglar :S
-import PrivateRoute from './guards/PrivateRoute';
+import Home from './guards/Home';
 
 class App extends React.Component {
   constructor(props) {
@@ -51,11 +50,13 @@ class App extends React.Component {
           {user && <Switch>
             <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />  
             <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
+            <Home exact path="/" user={user} />
+
           </Switch> }
           {!user && <Switch>
             <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />  
             <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
-            <PrivateRoute exact path="/" user={user} />
+            <Home exact path="/" user={user} />
           </Switch> }
         </header>
       </div>
