@@ -5,7 +5,7 @@ import AuthService from '../../services/AuthService'
 export default class SignUp extends Component {
   constructor(props) {
     super(props)
-    this.authService = new AuthService();
+    this.AuthService = new AuthService();
   }
 
   state = {
@@ -21,7 +21,7 @@ export default class SignUp extends Component {
   handleSignUp = (e) => {
     e.preventDefault()
     const { history, setUser } = this.props;
-    this.authService.signup(this.state)
+    this.AuthService.signup(this.state)
     .then(
       (user) => {
         setUser(user);
@@ -36,7 +36,7 @@ export default class SignUp extends Component {
   handleUpload = (e) => {
     const uploadData = new FormData();
     uploadData.append('picture', e.target.files[0])
-    this.authService.upload(uploadData)
+    this.AuthService.upload(uploadData)
     .then(
       (data) => {
         this.setState({...this.state, picture: data.secure_url})
