@@ -1,0 +1,8 @@
+.YouTubeContainerStyle {
+    display: flex;
+    justify-content: center;
+    border: solid 1px rgb(38, 255, 0);
+    margin-left: 10px;
+    width: 30%;
+    height: 500px;
+  }
