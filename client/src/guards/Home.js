@@ -7,8 +7,8 @@ import TwitchContainer from '../components/Twitch/TwitchContainer'
 export default function Home({ component: Component, user, redirectPath, ...rest }) {
 
 
-  
-  
+
+
 
   return (
 
@@ -21,8 +21,6 @@ export default function Home({ component: Component, user, redirectPath, ...rest
               <TwitchContainer></TwitchContainer>
             </div>
           </React.Fragment>
-
-
         } else {
           return <Redirect to={{ pathname: redirectPath }} />
         }

@@ -1,9 +1,7 @@
-.parentDiv {
- 
-}
 
 .tweetsList {
   overflow: scroll;
   width:320px;
   height: 500px
 }
+
