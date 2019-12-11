@@ -1,9 +1,8 @@
 .TwitchContainerStyle {
-    background-color: red;
-    border: solid 1px black;
-    margin-left: 1000px;
-    width: 30%;
-    height: 500px;
-    
-  
-  }
+  display: flex;
+
+  border: solid 1px red;
+  margin-left: 1000px;
+  width: 30%;
+  height: 500px;
+}

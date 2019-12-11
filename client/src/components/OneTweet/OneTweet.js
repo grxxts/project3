@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./OneTweet.css"
 
 export default class OneTweet extends Component {
 
@@ -13,17 +14,15 @@ export default class OneTweet extends Component {
 
     render() {
         return (
-            <div className="eachTweet">
-                <div>
-                    {/* <img className="tweetImg" src={this.props.data.statuses.image_url} /> */}
-                </div>
-                <div>
-                    <h3>{this.props.data.user.screen_name}</h3>
-                    <h2>{this.props.data.created_at}</h2>
-                    <p><strong>Created by:</strong> {this.props.data.text}</p>
-                </div>
 
+
+            <div className="eachTweet">
+                <h5>@{this.props.data.user.screen_name}</h5>
+                <p>{this.props.data.created_at}</p>
+                <p> {this.props.data.text}</p>
             </div>
+
+
         )
     }
 }

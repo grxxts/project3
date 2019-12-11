@@ -1,0 +1,15 @@
+.NavBarStyle {
+    display: flex;
+    width: 100vw;
+    height: 70px;
+    background-color:rgba(122, 151, 122, 0.397);
+    color: black;
+  }
+
+  .ancleStyle {
+      display: flex;
+      justify-content: center;
+      margin-left:30px;
+      margin-top: 30px;
+
+  }

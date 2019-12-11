@@ -1,0 +1,11 @@
+.eachTweet {
+    margin-left: 5px;
+    border: 1px solid grey;
+    max-width: 300px;
+}
+
+.eachTweet h5 {
+
+    font-size: 15px;
+    color: red;
+}
