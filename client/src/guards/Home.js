@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom'
 import NavBar from '../components/NavBar/NavBar'
 import TwitterContainer from '../components/Twitter/TwitterContainer'
 import TwitchContainer from '../components/Twitch/TwitchContainer'
-import YouTube from '../components/YouTube/YouTube'
+import YouTube from '../components/YouTube/YouTubeContainer'
 
 export default function Home({ component: Component, user, redirectPath, ...rest }) {
 
