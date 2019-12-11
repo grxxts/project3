@@ -7,6 +7,7 @@ const userSchema = new Schema({
   picture: { type: String, default: 'https://i.stack.imgur.com/l60Hf.png' },
   followingList: [{type: Schema.Types.ObjectId, ref:"FollowingList"}]
   
+  
 
 
 }, {

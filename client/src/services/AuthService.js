@@ -25,6 +25,7 @@ class AuthService {
     .then(res => Promise.resolve(res.data))
     .catch(error => console.error(error))
   }
+  
 
   upload = (picture) => {
     return this.instance.post('/upload', picture)
@@ -32,5 +33,7 @@ class AuthService {
     .catch(error => console.error(error))
   }
 }
+
+  
 
 export default AuthService;

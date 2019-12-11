@@ -55,6 +55,22 @@ img {
 
 .NavBarStyle {
   width: 100vw;
-  background-color: red;
+  height: 50px;
+  background-color: grey;
   color: black;
+}
+
+.TwitterDisplayer {
+  border: solid 1px black;
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 30%;
+  height: 500px;
+  
+
+}
+
+.generalContainer {
+  display: flex;
+  
 }

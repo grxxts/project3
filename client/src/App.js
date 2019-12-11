@@ -6,14 +6,17 @@ import SignUp from './components/Signup/Signup';
 import AuthService from './services/AuthService';
 import Home from './guards/Home';
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
+
     this.AuthService = new AuthService();
   }
 
   state = {
-    user: null
+    user: null,
+    beers: []
   }
 
   setUser = (user) => {
@@ -38,6 +41,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    
     this.fetchUser()
   }
 

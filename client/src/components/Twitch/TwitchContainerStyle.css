@@ -1,0 +1,9 @@
+.TwitchContainerStyle {
+    background-color: red;
+    border: solid 1px black;
+    margin-left: 1000px;
+    width: 30%;
+    height: 500px;
+    
+  
+  }
