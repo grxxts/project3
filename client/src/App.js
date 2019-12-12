@@ -17,7 +17,7 @@ class App extends React.Component {
 
   state = {
     user: null,
-    beers: []
+    // videoId : videoId
   }
 
   setUser = (user) => {
@@ -46,12 +46,12 @@ class App extends React.Component {
   //   let searchVideos = e.target.value;
   //   let allVideos = [...this.state.allVideos]
   //   let filteredVideos = allVideos.filter((video) => {
-  //     let videoName = { tnhis.props.videoId }
+  //     let videoName = { this.props.videoId }
   //     return videoName.indexOf(searchVideos) !== -1
   //   })
   //   this.setState({
   //     ...this.state,
-  //     video: filteredVideos,
+  //     videoId: filteredVideos,
   //     searchVideos: searchVideos
   //   })
   // }

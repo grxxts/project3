@@ -18,34 +18,48 @@ export default class YouTubeContainer extends Component {
         };
     }
 
-    componentDidMount() {
+    handlerTitle= (title) => {
+        this.setState({
+            ...this.state,
+            channelTitle: title
+        },()=>{
+            this.petisPutaMadre()
+        })
+    }
+    
 
+    componentDidMount() {
+        this.petisPutaMadre()
+    }
+
+    petisPutaMadre = () => {
         Axios.get(`https://www.googleapis.com/youtube/v3/channels?forUsername=${this.state.channelTitle}&key=AIzaSyCky9oUUhBP7y7UXa8Dt0gu4raJjR9GwQ0&part=snippet,contentDetails,statistics,status`)
 
-            .then(channel => {
-                const channelId = channel.data.items[0].id
-
-                this.setState({
-                    ...this.state,
-                    loading: true,
-                    channelId: channelId,
-                })
-
-                console.log(this.state)
-            }
-            )
-            .then(() => { return Axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyCky9oUUhBP7y7UXa8Dt0gu4raJjR9GwQ0&channelId=${this.state.channelId}&part=snippet`).then(video => {
-            const videoId = video.data.items[0].id.videoId
-            
+        .then(channel => {
+            const channelId = channel.data.items[0].id
 
             this.setState({
                 ...this.state,
                 loading: true,
-                videoId: videoId,
+                channelId: channelId,
             })
-            console.log(this.state.videoId)
-        }) })
-            .catch(err => console.log(err))
+
+            console.log(this.state)
+        }
+        )
+        .then(() => { return Axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyCky9oUUhBP7y7UXa8Dt0gu4raJjR9GwQ0&channelId=${this.state.channelId}&part=snippet`).then(video => {
+        const videoId = video.data.items[0].id.videoId
+        
+
+        this.setState({
+            ...this.state,
+            loading: true,
+            videoId: videoId,
+        })
+        console.log(this.state.videoId)
+    }) })
+        .catch(err => console.log(err))
+
     }
 
 
@@ -55,10 +69,8 @@ export default class YouTubeContainer extends Component {
             <React.Fragment>
                 <div></div>
                 <h3>YouTube Displayer</h3>
-                <SearchBar  search={this.props.search}></SearchBar>
+                <SearchBar  search={this.handlerTitle}></SearchBar>
                 <DisplayerYT videoId={this.state.videoId}></DisplayerYT>
-
-              
             </React.Fragment>
         )
     }
