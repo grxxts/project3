@@ -5,6 +5,7 @@ import Login from './components/Login/Login';
 import SignUp from './components/Signup/Signup';
 import AuthService from './services/AuthService';
 import Home from './guards/Home';
+import DisplayerYT from "./components/YouTube/YouTubeContainer"
 
 
 class App extends React.Component {
@@ -40,8 +41,23 @@ class App extends React.Component {
     }
   }
 
+
+  // searchVideos(e) {
+  //   let searchVideos = e.target.value;
+  //   let allVideos = [...this.state.allVideos]
+  //   let filteredVideos = allVideos.filter((video) => {
+  //     let videoName = { tnhis.props.videoId }
+  //     return videoName.indexOf(searchVideos) !== -1
+  //   })
+  //   this.setState({
+  //     ...this.state,
+  //     video: filteredVideos,
+  //     searchVideos: searchVideos
+  //   })
+  // }
+
   componentDidMount() {
-    
+
     this.fetchUser()
   }
 
@@ -52,16 +68,16 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           {user && <Switch>
-            <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />  
+            <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />
             <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
             <Home exact path="/" user={user} />
 
-          </Switch> }
+          </Switch>}
           {!user && <Switch>
-            <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />  
+            <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />
             <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
             <Home exact path="/" user={user} />
-          </Switch> }
+          </Switch>}
         </header>
       </div>
     );

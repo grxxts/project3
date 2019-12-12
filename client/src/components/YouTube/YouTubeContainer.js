@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
 import DisplayerYT from '../DisplayerYT/DisplayerYT'
+import SearchBar from '../SearchBar/SearchBar';
 
 export default class YouTubeContainer extends Component {
 
@@ -10,7 +11,7 @@ export default class YouTubeContainer extends Component {
         this.state = {
             videoId: "",
             channelId: "",
-            channelTitle: "elrubiusOMG",
+            channelTitle: "TravisScottVEVO",
             loading: false,
             Id: ""
 
@@ -52,7 +53,9 @@ export default class YouTubeContainer extends Component {
         console.log(this.state.yVideos)
         return (
             <React.Fragment>
+                <div></div>
                 <h3>YouTube Displayer</h3>
+                <SearchBar  search={this.props.search}></SearchBar>
                 <DisplayerYT videoId={this.state.videoId}></DisplayerYT>
 
               
