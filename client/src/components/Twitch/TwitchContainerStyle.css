@@ -1,6 +1,6 @@
 .TwitchContainerStyle {
   display: flex;
-  border: solid 1px blue;
+  /* border: solid 1px blue; */
   margin-left: 10px;
   width: 30%;
   height: 500px;

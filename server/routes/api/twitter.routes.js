@@ -7,7 +7,7 @@ const axios = require('axios');
 
 
 router.get("/getTweets",(req, res) => {
-    axios.get('https://api.twitter.com/1.1/search/tweets.json?q=from:Grxxts_',{headers:{ Authorization : "Bearer " + `${process.env.TWITTER_KEY}`}})
+    axios.get('https://api.twitter.com/1.1/search/tweets.json?q=from:auronplay',{headers:{ Authorization : "Bearer " + `${process.env.TWITTER_KEY}`}})
     .then((listOfTweets)=>{
         res.json({tweets:listOfTweets.data})
     })

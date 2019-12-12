@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-
 import Axios from 'axios';
 import OneVideoYouTube from '../OneVideoYouTube/OneVideoYouTube';
-// import OneVideoYouTube from "./OneVideoYouTube"
 
 export default class YouTubeContainer extends Component {
 
@@ -10,36 +8,53 @@ export default class YouTubeContainer extends Component {
         super();
 
         this.state = {
-            yVideos: [],
-            loading: true,
-            
+            yVideosId: "",
+            channelId: "UCyQqzYXQBUWgBTn4pw_fFSQ",
+            channelTitle: "",
+            loading: false,
+
         };
     }
 
     componentDidMount() {
-        Axios.get("https://www.googleapis.com/youtube/v3/channels?forUsername=auronplay&key=AIzaSyCky9oUUhBP7y7UXa8Dt0gu4raJjR9GwQ0&part=snippet,contentDetails,statistics,status")
-        .then(yVideos => {
-            console.log(yVideos)
-            this.setState({
-                yVideos: yVideos.data,
-                loading: false
-            })
-        }
-        )
-        .catch(err => console.log(err))
-        }
 
-       
+        Axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyCky9oUUhBP7y7UXa8Dt0gu4raJjR9GwQ0&channelId=${this.state.channelId}&part=snippet`)
+
+            .then(channelId => {
+                const videoId = channelId.data.items[0].id.videoId
+                const channelTitle = channelId.data.items[0].snippet.channelTitle
+                console.log(videoId, channelTitle)
+
+                this.setState({
+                    ...this.state,
+                    loading: true,
+                    yVideosId: videoId,
+                    channelTitle: channelTitle 
+                })
+
+                console.log(this.state)
+            }
+            )
+            .then(() => { return Axios.get("https://www.googleapis.com/youtube/v3/search?key=AIzaSyCky9oUUhBP7y7UXa8Dt0gu4raJjR9GwQ0&channelId=UCyQqzYXQBUWgBTn4pw_fFSQ&part=snippet") })
+            .then(payload => {
+                // console.log(`payload${payload}`)
+            })
+            .catch(err => console.log(err))
+    }
+
+
     render() {
+        console.log(this.state.yVideos)
         return (
             <React.Fragment>
-                    <div>
-                    <h3>YouTube Displayer</h3>
-                    <OneVideoYouTube></OneVideoYouTube>
-                    <p>lalala esto es una prueba</p>
-                    </div>
-               
+                <h3>YouTube Displayer</h3>
+                <ul className="yVideosList">
+                    <p>{this.state.yVideos}</p>
+                    
+                </ul>
             </React.Fragment>
         )
     }
 }
+
+

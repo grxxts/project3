@@ -19,7 +19,7 @@ export default class TwitterContainer extends Component {
     componentDidMount() {
         Axios.get("http://localhost:3001/api/twitter/getTweets")
             .then(tweets => {
-                console.log(tweets)
+                // console.log(tweets)
                 this.setState({
                     tweets: tweets.data.tweets.statuses,
                     loading: false
@@ -34,10 +34,10 @@ export default class TwitterContainer extends Component {
 
 
     render() {
-        console.log(this.state.tweets.tweets)
-        console.log(this.state.loading)
+        // console.log(this.state.tweets.tweets)
+        // console.log(this.state.loading)
         return (
-            <React.Fragment className="parentDiv">
+            <React.Fragment>
                 <h3>Latest Tweets</h3>
                 <ul className="tweetsList">
                     {this.state.tweets.map((tweet, idx) => {

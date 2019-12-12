@@ -2,8 +2,10 @@
 .tweetsList {
   display: flex;
   flex-direction: column;
-  overflow: scroll;
-  width:320px;
+  overflow-y: scroll;
+  width:360px;
   height: 500px
 }
+
+
 
