@@ -14,7 +14,7 @@ export default class OneVideoYouTube extends Component{
  
     return (
       <YouTube
-        videoId="ezeZS3WUpgo"
+        videoId={this.props.videoId}
         opts={opts}
         onReady={this._onReady}
       />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
-import OneVideoYouTube from '../OneVideoYouTube/OneVideoYouTube';
+import DisplayerYT from '../DisplayerYT/DisplayerYT'
 
 export default class YouTubeContainer extends Component {
 
@@ -8,37 +8,42 @@ export default class YouTubeContainer extends Component {
         super();
 
         this.state = {
-            yVideosId: "",
-            channelId: "UCyQqzYXQBUWgBTn4pw_fFSQ",
-            channelTitle: "",
+            videoId: "",
+            channelId: "",
+            channelTitle: "elrubiusOMG",
             loading: false,
+            Id: ""
 
         };
     }
 
     componentDidMount() {
 
-        Axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyCky9oUUhBP7y7UXa8Dt0gu4raJjR9GwQ0&channelId=${this.state.channelId}&part=snippet`)
+        Axios.get(`https://www.googleapis.com/youtube/v3/channels?forUsername=${this.state.channelTitle}&key=AIzaSyCky9oUUhBP7y7UXa8Dt0gu4raJjR9GwQ0&part=snippet,contentDetails,statistics,status`)
 
-            .then(channelId => {
-                const videoId = channelId.data.items[0].id.videoId
-                const channelTitle = channelId.data.items[0].snippet.channelTitle
-                console.log(videoId, channelTitle)
+            .then(channel => {
+                const channelId = channel.data.items[0].id
 
                 this.setState({
                     ...this.state,
                     loading: true,
-                    yVideosId: videoId,
-                    channelTitle: channelTitle 
+                    channelId: channelId,
                 })
 
                 console.log(this.state)
             }
             )
-            .then(() => { return Axios.get("https://www.googleapis.com/youtube/v3/search?key=AIzaSyCky9oUUhBP7y7UXa8Dt0gu4raJjR9GwQ0&channelId=UCyQqzYXQBUWgBTn4pw_fFSQ&part=snippet") })
-            .then(payload => {
-                // console.log(`payload${payload}`)
+            .then(() => { return Axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyCky9oUUhBP7y7UXa8Dt0gu4raJjR9GwQ0&channelId=${this.state.channelId}&part=snippet`).then(video => {
+            const videoId = video.data.items[0].id.videoId
+            
+
+            this.setState({
+                ...this.state,
+                loading: true,
+                videoId: videoId,
             })
+            console.log(this.state.videoId)
+        }) })
             .catch(err => console.log(err))
     }
 
@@ -48,10 +53,9 @@ export default class YouTubeContainer extends Component {
         return (
             <React.Fragment>
                 <h3>YouTube Displayer</h3>
-                <ul className="yVideosList">
-                    <p>{this.state.yVideos}</p>
-                    
-                </ul>
+                <DisplayerYT videoId={this.state.videoId}></DisplayerYT>
+
+              
             </React.Fragment>
         )
     }

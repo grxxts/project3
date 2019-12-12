@@ -22,7 +22,7 @@ export default function Home({ component: Component, user, redirectPath, ...rest
               <div className="YoutubeContainerStyle">
               <YouTubeContainer>
               </YouTubeContainer>
-              <DisplayerYT></DisplayerYT>
+             
               </div>
               <div className="TwitterContainerStyle">
               <TwitterContainer></TwitterContainer>
