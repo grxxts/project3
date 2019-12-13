@@ -33,7 +33,7 @@ export default class YouTubeContainer extends Component {
     }
 
     petisPutaMadre = () => {
-        Axios.get(`https://www.googleapis.com/youtube/v3/channels?forUsername=${this.state.channelTitle}&key=AIzaSyCky9oUUhBP7y7UXa8Dt0gu4raJjR9GwQ0&part=snippet,contentDetails,statistics,status`)
+        Axios.get(`https://www.googleapis.com/youtube/v3/channels?forUsername=${this.state.channelTitle}&key=${process.env.REACT_APP_YT_KEY}&part=snippet,contentDetails,statistics,status`)
 
         .then(channel => {
             const channelId = channel.data.items[0].id
@@ -45,9 +45,12 @@ export default class YouTubeContainer extends Component {
             })
 
             console.log(this.state)
+            console.log(process.env)
         }
         )
-        .then(() => { return Axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyCky9oUUhBP7y7UXa8Dt0gu4raJjR9GwQ0&channelId=${this.state.channelId}&part=snippet`).then(video => {
+
+        
+        .then(() => { return Axios.get(`https://www.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_YT_KEY}&channelId=${this.state.channelId}&part=snippet`).then(video => {
         const videoId = video.data.items[0].id.videoId
         
 
