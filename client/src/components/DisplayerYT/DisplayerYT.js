@@ -8,7 +8,7 @@ export default class OneVideoYouTube extends Component{
       height: '390px',
       width: '640px',
       playerVars: { // https://developers.google.com/youtube/player_parameters
-        autoplay: 1
+        autoplay: 0
       }
     };
  

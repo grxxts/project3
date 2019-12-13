@@ -69,7 +69,7 @@ export default class YouTubeContainer extends Component {
             <React.Fragment>
                 <div></div>
                 <h3>YouTube Displayer</h3>
-                <SearchBar  search={this.handlerTitle}></SearchBar>
+                <SearchBar search={this.handlerTitle}></SearchBar>
                 <DisplayerYT videoId={this.state.videoId}></DisplayerYT>
             </React.Fragment>
         )

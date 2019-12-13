@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./SearchBar.css"
 
 export default class SearchBar extends Component {
     constructor(props) {
@@ -27,8 +28,8 @@ export default class SearchBar extends Component {
     render() {
         return (
             <div>
-                <input onChange={(e) => { this.handlerInput(e) }} type="text"></input>
-                <button type="submit" onClick={(e) => {this.handlerSubmit(e)}}>Search</button>
+                <input className="searchBarStyle" onChange={(e) =>  this.handlerInput(e) } type="text"></input>
+                <button className="imputButton" type="submit" onClick={(e) => {this.handlerSubmit(e)}}>Search</button>
             </div >
         )
     }

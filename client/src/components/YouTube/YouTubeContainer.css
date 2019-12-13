@@ -1,5 +1,5 @@
 .YouTubeContainerStyle {
-   
-    border: solid 1px rgb(38, 255, 0);
+    background-color: black;
+    border: solid 1px #193af6;
     margin-left: 10px;
   }
