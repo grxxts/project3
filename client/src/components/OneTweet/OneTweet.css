@@ -1,11 +1,14 @@
 .eachTweet {
-    
-    border: 1px solid grey;
+    height: 200px;
+    margin: 15px;
+    background-color: white;
+    border: 1px solid black;
+
 
 }
 
 .eachTweet h5 {
-
+    margin-left: 5px;
     font-size: 15px;
     color: red;
 }

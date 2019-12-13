@@ -5,6 +5,7 @@ import TwitterContainer from '../components/Twitter/TwitterContainer'
 import TwitchContainer from '../components/Twitch/TwitchContainer'
 import YouTubeContainer from '../components/YouTube/YouTubeContainer'
 import DisplayerYT from '../components/DisplayerYT/DisplayerYT'
+import TwitchDisplayer from '../components/TwitchDisplayer/TwitchDisplayer'
 
 export default function Home({ component: Component, user, redirectPath, ...rest }) {
 
@@ -22,6 +23,7 @@ export default function Home({ component: Component, user, redirectPath, ...rest
               <div className="YoutubeContainerStyle">
               <YouTubeContainer>
               </YouTubeContainer>
+              <TwitchDisplayer></TwitchDisplayer>
              
               </div>
               <div className="TwitterContainerStyle">

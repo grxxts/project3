@@ -1,5 +1,6 @@
 
 .tweetsList {
+  background-color: rgba(blue);
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
