@@ -6,15 +6,23 @@ export default class NavBar extends Component {
         return (
             <div>
                 <header className="NavBarStyle">
-                    <div className="ancleStyle">
-                    <a href = "/My list">My list</a>
-                    </div>
-                    <div className="ancleStyle">
-                    <a href = "/Discover">Discover</a>
-                    </div>
-                    <div className="ancleStyle">
-                    <a href = "/Inicio">Inicio</a>
-                    </div>
+                    <div className="navBarElements"></div>
+                    <ul>
+                        <div className="navBarLinks">
+                        <li><a href="default.asp">Home</a></li>
+                        <li><a href="news.asp">Discover</a></li>
+                        <li><a href="contact.asp">My List</a></li>
+                        </div>
+                        <div class="dropdown">
+                            <button className="dropbtn">My Profile</button>
+                            <div class="dropdown-content">
+                                <a href="/logout">Logout</a>
+                                <a href="/myfavs">My Favs</a>
+
+                               
+                            </div>
+                        </div>
+                    </ul>
                 </header>
             </div>
         )

@@ -8,8 +8,7 @@ export default class TwitchDisplayer extends Component {
         super();
 
         this.state = {
-            streamerName: ""
-           
+            streamerName: ""   
         };
     }
 
@@ -23,8 +22,6 @@ export default class TwitchDisplayer extends Component {
             ...this.state,
             streamerName: streamerName        
         })
-
-    
     }
     
     
@@ -35,11 +32,6 @@ export default class TwitchDisplayer extends Component {
 
         this.handlerTitle()
        
-        
-        // this.setState({
-        //     ...this.state,
-        //     channel : ""
-        // })
     }
 
 

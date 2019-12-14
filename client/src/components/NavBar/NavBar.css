@@ -1,17 +1,73 @@
 .NavBarStyle {
+    justify-content: space-between;
     display: flex;
+    flex-direction: row;
     width: 100vw;
     height: 70px;
-    background-color:rgba(39, 10, 77, 0.945);
+    background-color: rgba(39, 10, 77, 0.945);
     color: black;
-  }
+}
 
-  .ancleStyle {
-      text-decoration: none;
-      color: white;
-      display: flex;
-      justify-content: center;
-      margin-left:50px;
-      margin-top: 30px;
+.navBarLinks {
+    display: flex;
+}
 
+
+ul {
+    
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    display: block;
+    width: 100px;
+}
+
+ 
+/* dropdown button; */
+
+.dropbtn {
+    background-color: #5b23a3;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
   }
+  
+ 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+ 
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+
+  .dropdown-content a:hover {background-color: #ddd;}
+ 
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #441581;}

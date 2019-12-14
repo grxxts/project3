@@ -21,9 +21,8 @@ export default function Home({ component: Component, user, redirectPath, ...rest
           return <React.Fragment><NavBar loggedInUser={user} {...props} />
             <div className="generalContainer">
               <div className="YoutubeContainerStyle">
-              {/* <YouTubeContainer>
-              </YouTubeContainer> */}
               <TwitchDisplayer></TwitchDisplayer>
+              <YouTubeContainer></YouTubeContainer>
              
               </div>
               <div className="TwitterContainerStyle">
