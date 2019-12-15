@@ -118,10 +118,7 @@ router.post('/upload', uploader.single('picture'), (req, res) => {
   }
 })
 
-router.get("/hola",(req,res)=>{
-  // res.json({hola: "hola joder mierda"})
-  console.log("hola joder mierda")
-})
+
 
 
 module.exports = router;
