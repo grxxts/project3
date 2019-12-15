@@ -6,7 +6,6 @@ export default class OneTweet extends Component {
     constructor(props) {
         super(props);
 
-        // console.log(props);
         this.state = {
             tweets: props.tweets
             
@@ -18,10 +17,10 @@ export default class OneTweet extends Component {
 
 
             <div className="eachTweet">
-                <h5>@{this.props.data.user.screen_name}</h5>
-                <h6>{this.props.data.user.name}</h6>
-                <p>{this.props.data.created_at}</p>
-                <p> {this.props.data.text}</p>
+                <h5 className="twitter-tweetname" >@{this.props.data.user.screen_name}</h5>
+                <h6 className="twitter-username">{this.props.data.user.name}</h6>
+                <p className="twitter-created">{this.props.data.created_at}</p>
+                <p className="twitter-text"> {this.props.data.text}</p>
             </div>
 
 

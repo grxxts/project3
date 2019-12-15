@@ -1,0 +1,9 @@
+
+.generalContainer {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(60, 22, 85, 0.856);
+  }

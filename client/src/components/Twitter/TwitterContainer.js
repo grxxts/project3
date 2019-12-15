@@ -26,7 +26,7 @@ export default class TwitterContainer extends Component {
         this.setState({
             ...this.state,
             tweetsSearch: tweets
-        
+
         }, () => {
             this.petisPutaMadre()
         })
@@ -43,13 +43,13 @@ export default class TwitterContainer extends Component {
         Axios.get("http://localhost:3001/api/twitter/getTweets/" + this.state.tweetsSearch)
 
             .then(tweets => {
-          console.log(tweets.data.tweets.statuses)
+                console.log(tweets.data.tweets.statuses)
 
                 this.setState({
                     ...this.state,
                     tweets: tweets.data.tweets.statuses,
                     loading: false
-                })  
+                })
 
             }
             )
@@ -65,15 +65,16 @@ export default class TwitterContainer extends Component {
         console.log(this.state.loading)
         return (
             <React.Fragment>
-                <h3>Latest Tweets</h3>
-                <ul className="tweetsList">
-                    <SearchBar search={(e) => this.handlerTitle(e)}></SearchBar>
-                    {this.state.tweets.map((tweet, idx) => {
-                        return (
-                            <OneTweet key={idx} data={tweet}></OneTweet>
-                        );
-                    })}
-                </ul>
+                <div>
+                    <ul className="tweetsList">
+                        <SearchBar search={(e) => this.handlerTitle(e)}></SearchBar>
+                            {this.state.tweets.map((tweet, idx) => {
+                                return (
+                                    <OneTweet key={idx} data={tweet}></OneTweet>
+                                );
+                            })}
+                    </ul>
+                </div>
             </React.Fragment>
         )
     }

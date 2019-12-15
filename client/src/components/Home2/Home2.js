@@ -4,6 +4,7 @@ import NavBar from '../NavBar/NavBar'
 import TwitterContainer from '../Twitter/TwitterContainer'
 import YouTubeContainer from '../YouTube/YouTubeContainer'
 import TwitchDisplayer from '../TwitchDisplayer/TwitchDisplayer'
+import "./Home2.css"
 
 export default class Home2 extends Component {
 
@@ -56,32 +57,24 @@ export default class Home2 extends Component {
         }
 
         return (
-
-
-
             <React.Fragment><NavBar loggedInUser={this.state.user} {...this.props} />
-                <div className="generalContainer">
-                    <div className="YoutubeContainerStyle">
-                        <button className="show-button" onClick={this.toggleShowYT}>{this.state.showYT ? 'Hide form' : 'ShowYT'}</button>
-                        {youtube}
-                    </div>
-                    <div className="TwitterContainerStyle">
-                        <button className="show-button" onClick={this.toggleShowTwitter}>{this.state.showTwitter ? 'Hide form' : 'ShowTwitter'}</button>
+                <div className="rollTwitter">
+                    <div className="containerStyleTwitter">
+                        <button className="show-button" onClick={this.toggleShowTwitter}>{this.state.showTwitter ? 'Hide' : 'Show Twitter'}</button>
                         {twitter}
                     </div>
-                    <div>
-                        <button className="show-button" onClick={this.toggleShowTwitch}>{this.state.showTwitch ? 'Hide form' : 'ShowTwitch'}</button>
-                        {twitch}
+                </div>
+                <div className="generalContainer">
+                    <div className="containerStyle">
+                        <button className="show-button" onClick={this.toggleShowYT}>{this.state.showYT ? 'Hide' : 'Show YouTube'}</button>
+                        {youtube}
                     </div>
-                    <div>
+                    <div className="containerStyle">
+                        <button className="show-button" onClick={this.toggleShowTwitch}>{this.state.showTwitch ? 'Hide' : 'Show Twitch'}</button>
+                        {twitch}
                     </div>
                 </div>
             </React.Fragment>
-
-
-
-
-
         )
     }
 }

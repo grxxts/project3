@@ -41,7 +41,7 @@ export default class TwitchDisplayer extends Component {
         console.log(this.state)
         return (
             <div>
-                <SearchBar search={(e) => this.handlerTitle(e)}></SearchBar>
+                <SearchBar className="searchBarStyle" search={(e) => this.handlerTitle(e)}></SearchBar>
                {this.state.streamerName !== "" && <ReactTwitchEmbedVideo channel={this.state.streamerName} />}
             </div>
         )

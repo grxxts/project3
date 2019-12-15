@@ -1,14 +1,34 @@
 .eachTweet {
-    height: 200px;
-    margin: 15px;
+    margin: 0px;
+    min-height: 100px;
+    max-height: 120px;
+    max-width: 700px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border: 1px solid black;
-
-
 }
 
-.eachTweet h5 {
-    margin-left: 5px;
-    font-size: 15px;
-    color: red;
+
+
+.twitter-tweetname{
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+.twitter-username{
+    font-size: 12px;
+    margin: 5px;
+    padding: 0;
+}
+.twitter-created{
+    font-size: 12px;
+    margin: 5px;
+    padding: 0;
+}
+.twitter-text{
+    font-size: 12px;
+    margin: 5px;
+    padding: 0;
 }

@@ -1,15 +1,23 @@
 .searchBarStyle {
-    width: 280px;
+    color: white;
+    width: 420px;
     height: 25px;
     margin-bottom: 20px;
-    border-bottom: 1px solid black;
-    background-color: transparent
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    
 }
 
 .imputButton {
+    color: white;
+    width: 90px;
     height: 30px;
-    border: 1px solid black;
-    background-color: transparent
+    background-color: transparent;
+    border: 1px solid white;
+
 }
 
 
