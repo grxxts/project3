@@ -6,6 +6,7 @@ import SignUp from './components/Signup/Signup';
 import AuthService from './services/AuthService';
 import Home from './guards/Home';
 import DisplayerYT from "./components/YouTube/YouTubeContainer"
+import Home2 from './components/Home2/Home2';
 
 
 class App extends React.Component {
@@ -55,13 +56,13 @@ class App extends React.Component {
           {user && <Switch>
             <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />
             <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
-            <Home exact path="/" user={user} />
-
+            <Home2 exact path="/" user={user} />
+            
           </Switch>}
           {!user && <Switch>
             <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />
             <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
-            <Home exact path="/" user={user} />
+         
           </Switch>}
         </header>
       </div>

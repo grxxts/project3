@@ -34,7 +34,7 @@ const corsOptions = {
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true)
     } else {
-      console.log("originxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+      console.log("origin")
 
       console.log(origin)
       callback(new Error('me mola tu rollo'))

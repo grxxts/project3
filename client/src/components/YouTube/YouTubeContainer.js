@@ -13,7 +13,8 @@ export default class YouTubeContainer extends Component {
             channelId: "",
             channelTitle: "TravisScottVEVO",
             loading: false,
-            Id: ""
+            Id: "",
+        /*     show: false */
 
         };
     }
@@ -58,6 +59,7 @@ export default class YouTubeContainer extends Component {
             ...this.state,
             loading: true,
             videoId: videoId,
+        
         })
         console.log(this.state.videoId)
     }) })
@@ -66,13 +68,20 @@ export default class YouTubeContainer extends Component {
     }
 
 
+/*     toggleShow = () => {
+        const { show } = this.state;
+        this.setState({...this.state, show: !show})
+      } */
+
+
     render() {
         console.log(this.state.yVideos)
         return (
-            <React.Fragment>
+            <React.Fragment onSubmit={this.handleSubmit} >
                 <div></div>
                 <h3>YouTube Displayer</h3>
                 <SearchBar search={this.handlerTitle}></SearchBar>
+                {/* <button className="show-button" onClick={this.toggleShow}>{this.state.show ? 'Hide form' : 'Show form'}</button> */}
                 <DisplayerYT videoId={this.state.videoId}></DisplayerYT>
             </React.Fragment>
         )

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import PageTitle from '../../fontStyles/PageTitle'
+
 import AuthService from '../../services/AuthService';
+import "./Login.css"
 
 export default class Login extends Component {
   constructor(props) {
@@ -14,36 +15,45 @@ export default class Login extends Component {
   }
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({...this.state, [name]:value})
+    this.setState({ ...this.state, [name]: value })
   }
   handleLogin = (e) => {
     const { setUser, history } = this.props;
     e.preventDefault()
     this.authService.login(this.state)
-    .then(
-      (user) => {
-        setUser(user)
-        history.push("/")
-      },
-      (error) => {
-        console.error(error)
-      }
-    )
+      .then(
+        (user) => {
+          setUser(user)
+          history.push("/")
+        },
+        (error) => {
+          console.error(error)
+        }
+      )
   }
 
   render() {
     const { username, password } = this.state;
     return (
-      <div>
-        <PageTitle color="black">Login</PageTitle>
-        <form onSubmit={this.handleLogin}>
-          <label htmlFor="username">Username: </label>
-          <input type="text" name="username" value={username} onChange={this.handleChange}/>
-          <label htmlFor="password" >Password: </label>
-          <input type="password" name="password" value={password} onChange={this.handleChange}/>
-
-          <input type="submit" value="Login"/>
-        </form>
+      <div className="parentContainer">
+        <div className="loginContainer">
+          <div className="loginElements">
+            <h1>Login</h1>
+            <form onSubmit={this.handleLogin}>
+              <div>
+                <label htmlFor="username">Username: </label>
+                <input type="text" name="username" value={username} onChange={this.handleChange} />
+              </div>
+              <div>
+                <label htmlFor="password" >Password: </label>
+                <input type="password" name="password" value={password} onChange={this.handleChange} />
+              </div>
+              <div>
+                <input type="submit" value="Login" />
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     )
   }

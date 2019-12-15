@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PageTitle from '../../fontStyles/PageTitle'
+
 import AuthService from '../../services/AuthService'
 
 export default class SignUp extends Component {
@@ -51,7 +51,7 @@ export default class SignUp extends Component {
     const { username, password, picture } = this.state;
     return (
       <div>
-        <PageTitle color="black">SignUp</PageTitle>
+        <h1>SignUp</h1>
         <form onSubmit={this.handleSignUp}>
           <label htmlFor="username">Username: </label>
           <input type="text" name="username" value={username} required onChange={this.handleChange}/>
