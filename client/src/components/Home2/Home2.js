@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { Route, Redirect } from 'react-router-dom'
-import NavBar from '../NavBar/NavBar'
 import TwitterContainer from '../Twitter/TwitterContainer'
 import YouTubeContainer from '../YouTube/YouTubeContainer'
 import TwitchDisplayer from '../TwitchDisplayer/TwitchDisplayer'

@@ -5,11 +5,10 @@ const userSchema = new Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true, minlength: 2 },
   picture: { type: String, default: 'https://i.stack.imgur.com/l60Hf.png' },
-  followingList: [{type: Schema.Types.ObjectId, ref:"FollowingList"}]
-  
-  
+  // followingList: [{type: Schema.Types.ObjectId, ref:"FollowingList"}]
+  followingPeople: [{type: String}]
 
-
+  
 }, {
   timestamps: true,
   toJSON: {

@@ -71,3 +71,10 @@ li a {
   .dropdown:hover .dropdown-content {display: block;}
   
   .dropdown:hover .dropbtn {background-color: #441581;}
+
+
+  .userImg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }

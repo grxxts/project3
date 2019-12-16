@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import "./NavBar.css"
-import { Link, Route, Switch } from 'react-router-dom'
-import Home2 from '../Home2/Home2'
-import Explore from '../Explore/Explore'
+import { Link } from 'react-router-dom'
 
 export default class NavBar extends Component {
 
@@ -12,13 +10,18 @@ export default class NavBar extends Component {
 
         this.state = {
             user: this.props.user,
-          
+
         };
     }
 
-    re=()=>{
+    re = () => {
         this.props.history.push('/home')
     }
+
+    reMyList = () => {
+        this.props.history.push('/mylist')
+    }
+
 
 
     render() {
@@ -29,11 +32,11 @@ export default class NavBar extends Component {
                     <div className="navBarElements"></div>
                     <ul>
                         <div className="navBarLinks">
-                            
+
                             <ul>
                                 <li>
                                     {/* <Link to="/" onClick={e=>{this.re(e)}}>Home</Link> */}
-                                    <button onClick={e=>{this.re(e)}}>Home</button>
+                                    <button onClick={e => { this.reMyList(e) }}>My List</button>
 
                                 </li>
                                 <li>
@@ -41,19 +44,25 @@ export default class NavBar extends Component {
 
                                 </li>
                                 <li>
-                                    <Link to="/mylist">My List</Link>
+                                    <button onClick={e => { this.re(e) }}>Home</button>
 
                                 </li>
                             </ul>
-                            
-                      
+
+
                         </div>
+                        <div>
+                            <h3>Hola {this.props.user.username}</h3>    
+                        </div>
+                        <div>
+                            <img className="userImg"src={this.props.user.picture} alt="userIMG"/>
+                        </div>
+
                         <div className="dropdown">
                             <button className="dropbtn">My Profile</button>
                             <div className="dropdown-content">
-                                <button onClick={()=>{this.props.logout()}}>LOGOUT</button>
+                                <button onClick={() => { this.props.logout() }}>LOGOUT</button>
                                 <a href="/myfavs">My Favs</a>
-
 
                             </div>
                         </div>

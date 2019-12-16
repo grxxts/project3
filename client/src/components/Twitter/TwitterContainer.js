@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import "./TwitterContainer.css"
 import OneTweet from '../OneTweet/OneTweet';
-import { Link } from "react-router-dom";
 import Axios from 'axios';
 import SearchBar from '../SearchBar/SearchBar';
 

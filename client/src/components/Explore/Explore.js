@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import NavBar from '../NavBar/NavBar'
-import YouTubeContainer from '../YouTube/YouTubeContainer';
 import TwitchDisplayer from '../TwitchDisplayer/TwitchDisplayer';
-import ReactTwitchEmbedVideo from "react-twitch-embed-video"
 
 
 
@@ -23,13 +20,18 @@ export default class Explore extends Component {
         return (
             <div>
                 <React.Fragment>
-                    {/* <YouTubeContainer></YouTubeContainer> */}
-                    <TwitchDisplayer toSearch={"BeyondTheSummit_PT"}
+                    <div>
+                    <TwitchDisplayer toSearch={"BeyondTheSummit_PT"} 
                     ></TwitchDisplayer>
+                    </div>
+                    <div>
                     <TwitchDisplayer toSearch={"MUITOls"}
                     ></TwitchDisplayer>
+                    </div>
+                    <div>
                       <TwitchDisplayer toSearch={"한동숙 (handongsuk)"}
                     ></TwitchDisplayer>
+                    </div>
                     {/* <ReactTwitchEmbedVideo ></ReactTwitchEmbedVideo> */}
 
 

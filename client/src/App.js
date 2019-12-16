@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import Login from './components/Login/Login';
 import SignUp from './components/Signup/Signup';
 import AuthService from './services/AuthService';
-import DisplayerYT from "./components/YouTube/YouTubeContainer"
 import Home2 from './components/Home2/Home2';
 import Explore from './components/Explore/Explore';
 import NavBar from './components/NavBar/NavBar';
+import MyList from './components/MyList/MyList';
 
 
 class App extends React.Component {
@@ -65,14 +65,15 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Hola</h1>
           <NavBar loggedInUser={this.state.user} {...this.props} user={this.state.user} logout={this.logout}/>
 
           {user && <Switch>
-            {/* <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />
-            <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} /> */}
+            <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />
+            <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
             <Route exact path="/home" render={(match) => <Home2 {...match} user={this.state.user} />} />
             <Route exact path="/explore" render={(match) => <Explore {...match} user={this.state.user} />} />
+            <Route exact path="/mylist" render={(match) => <MyList {...match} user={this.state.user} />} />
+
           </Switch>}
 
           {!user && <Switch>
