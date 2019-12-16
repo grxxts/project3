@@ -1,8 +1,7 @@
 .eachTweet {
     margin: 0px;
-    min-height: 100px;
-    max-height: 120px;
-    max-width: 700px;
+    height: 90px;
+    max-width: 500px;
     min-width: 350px;
     display: flex;
     flex-direction: column;
@@ -12,23 +11,14 @@
 
 
 
-.twitter-tweetname{
-    font-size: 12px;
-    margin: 0;
-    padding: 0;
-}
-.twitter-username{
-    font-size: 12px;
-    margin: 5px;
-    padding: 0;
-}
+
 .twitter-created{
     font-size: 12px;
     margin: 5px;
     padding: 0;
 }
 .twitter-text{
-    font-size: 12px;
+    font-size: 14px;
     margin: 5px;
     padding: 0;
 }

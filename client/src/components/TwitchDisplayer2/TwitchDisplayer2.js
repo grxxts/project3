@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactTwitchEmbedVideo from "react-twitch-embed-video"
-import SearchBar from '../SearchBar/SearchBar'
+import "./TwitchDisplayer2.css"
+
 
 export default class TwitchDisplayer extends Component {
 
@@ -25,6 +26,9 @@ export default class TwitchDisplayer extends Component {
     }
 
 
+
+
+
     componentDidMount() {
 
         // this.handlerTitle()
@@ -37,20 +41,18 @@ export default class TwitchDisplayer extends Component {
     render() {
         // console.log(this.state)
         return (
-            <div>
-                <SearchBar className="searchBarStyle" search={(e) => this.handlerTitle(e)}></SearchBar>
-                {this.state.streamerName !== "" &&
+            <div className="explore-twitch">
+                <div>
                     <ReactTwitchEmbedVideo
-                        autoplay="1"
-                        channel="wesg_cs"
-                        height="480"
-                        muted={false}
+                       autoplay={false}
+                        height="240"
+                        layout="video"
+                        muted={true}
                         targetClass="twitch-embed"
-                        width="940" 
-                        theme="dark"
-                        channel={this.state.streamerName}
+                        width="400" channel={this.state.streamerName}
                     />}
-
+                    </div>
+               
             </div>
         )
     }

@@ -1,18 +1,23 @@
 
 .tweetsList {
+  display: flex;
+  justify-content: center;
   background-color: rgba(blue);
   display: flex;
   overflow-x: scroll;
-  width: 90%;
-  height: 120px;
-
+  overflow-y: hidden;
+  width: 100%;
+  height: 90px;
 }
 
-/* .rollTwitter {
-  height: 200px;
+.tweetUser {
   display: flex;
-  flex-direction: row;
-} */
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
 
 
 

@@ -6,14 +6,14 @@ import SearchBar from '../SearchBar/SearchBar';
 
 export default class TwitterContainer extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             tweets: [],
             name: "",
             screenname: "",
-            loading: true,
+            loading: true
 
         };
     }
@@ -64,16 +64,21 @@ export default class TwitterContainer extends Component {
         console.log(this.state.loading)
         return (
             <React.Fragment>
-                <div>
-                    <ul className="tweetsList">
-                        <h3>Reading {this.props.screenname} activity</h3>
-                        <SearchBar search={(e) => this.handlerTitle(e)}></SearchBar>
-                            {this.state.tweets.map((tweet, idx) => {
-                                return (
-                                    <OneTweet key={idx} data={tweet}></OneTweet>
-                                );
-                            })}
-                    </ul>
+        
+                <div className="tweetUser">
+                    <div className = "reading-tweet">
+                    <h3>Reading {this.props.data}</h3>
+                    </div>
+                    <div className="searchTweet">
+                    <SearchBar search={(e) => this.handlerTitle(e)}></SearchBar>
+                    </div>
+                </div>
+                    <div className="tweetsList">
+                    {this.state.tweets.map((tweet, idx) => {
+                        return (
+                            <OneTweet key={idx} data={tweet}></OneTweet>
+                        );
+                    })}
                 </div>
             </React.Fragment>
         )

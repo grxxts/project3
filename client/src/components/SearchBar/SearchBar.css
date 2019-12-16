@@ -1,6 +1,6 @@
 .searchBarStyle {
     color: white;
-    width: 420px;
+    width: 120px;
     height: 25px;
     margin-bottom: 20px;
     background-color: transparent;
@@ -16,7 +16,7 @@
     width: 90px;
     height: 30px;
     background-color: transparent;
-    border: 1px solid white;
+    border: none;  
 
 }
 

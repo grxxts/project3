@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TwitchDisplayer from '../TwitchDisplayer/TwitchDisplayer';
+import TwitchDisplayer2 from '../TwitchDisplayer2/TwitchDisplayer2';
 
 
 
@@ -21,20 +21,19 @@ export default class Explore extends Component {
             <div>
                 <React.Fragment>
                     <div>
-                    <TwitchDisplayer toSearch={"BeyondTheSummit_PT"} 
-                    ></TwitchDisplayer>
-                    <button>Add Favs</button>
+                      <TwitchDisplayer2 toSearch={"한동숙 (handongsuk)"}
+                    ></TwitchDisplayer2>
                     </div>
                     <div>
-                    <TwitchDisplayer toSearch={"MUITOls"}
-                    ></TwitchDisplayer>
-                      <button>Add Favs</button>
+                      <TwitchDisplayer2 toSearch={"wesg_cs"}
+                    ></TwitchDisplayer2>
                     </div>
                     <div>
-                      <TwitchDisplayer toSearch={"한동숙 (handongsuk)"}
-                    ></TwitchDisplayer>
+                      <TwitchDisplayer2 toSearch={"auronplay"}
+                    ></TwitchDisplayer2>
                     </div>
-                    {/* <ReactTwitchEmbedVideo ></ReactTwitchEmbedVideo> */}
+
+
 
 
 
