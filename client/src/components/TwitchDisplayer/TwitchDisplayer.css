@@ -1,0 +1,14 @@
+.displayerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(61, 55, 63, 0.411);
+    width: 960px;
+    height: 500px;
+}
+
+.theContainer {
+        
+    background-color: rgba(61, 55, 63, 0.411);
+
+}

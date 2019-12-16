@@ -1,24 +1,26 @@
 .eachTweet {
     margin: 0px;
     height: 90px;
-    max-width: 500px;
-    min-width: 350px;
+    min-width: 250px;
     display: flex;
     flex-direction: column;
-    background-color: white;
-    border: 1px solid black;
+    background-color: black;
+    border: 1px solid rgb(58, 58, 58);
 }
 
 
 
 
 .twitter-created{
+    color: white;
+    font-size: 10px;
+    margin: 5px 3px 0px 5px;
+    padding: 0;
+}
+.twitter-text{
+    color: white;
     font-size: 12px;
     margin: 5px;
     padding: 0;
 }
-.twitter-text{
-    font-size: 14px;
-    margin: 5px;
-    padding: 0;
-}
+

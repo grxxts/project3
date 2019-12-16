@@ -73,7 +73,6 @@ export default class YouTubeContainer extends Component {
         return (
             <React.Fragment onSubmit={this.handleSubmit} >
                 <div className="containerYouTube">
-                    <h3>YouTube Displayer</h3>
                     <SearchBar className="searchBarStyle" search={this.handlerTitle}></SearchBar>
                     <DisplayerYT videoId={this.state.videoId}></DisplayerYT>
                     <h3>Watching {this.state.channelTitle} channel</h3>

@@ -42,7 +42,7 @@ export default class TwitchDisplayer extends Component {
         // console.log(this.state)
         return (
             <div className="explore-twitch">
-                <div>
+                <div className="displayerContainer">
                     <ReactTwitchEmbedVideo
                        autoplay={false}
                         height="240"

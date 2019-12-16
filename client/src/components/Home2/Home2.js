@@ -3,6 +3,7 @@ import TwitterContainer from '../Twitter/TwitterContainer'
 import YouTubeContainer from '../YouTube/YouTubeContainer'
 import TwitchDisplayer from '../TwitchDisplayer/TwitchDisplayer'
 import "./Home2.css"
+import FavLateral from '../FavLateral/FavLateral'
 
 export default class Home2 extends Component {
 
@@ -64,6 +65,9 @@ export default class Home2 extends Component {
                     </div>
                 </div>
                 <div className="generalContainer">
+                <div>
+                    <FavLateral></FavLateral>
+                </div>
                     <div className="containerStyle">
                         <button className="show-button" onClick={this.toggleShowYT}>{this.state.showYT ? 'Hide' : 'Show YouTube'}</button>
                         {youtube}

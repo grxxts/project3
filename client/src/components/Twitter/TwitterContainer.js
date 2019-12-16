@@ -67,7 +67,6 @@ export default class TwitterContainer extends Component {
         
                 <div className="tweetUser">
                     <div className = "reading-tweet">
-                    <h3>Reading {this.props.data}</h3>
                     </div>
                     <div className="searchTweet">
                     <SearchBar search={(e) => this.handlerTitle(e)}></SearchBar>
