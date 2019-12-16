@@ -1,31 +1,33 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import Login from './components/Login/Login';
 import SignUp from './components/Signup/Signup';
 import AuthService from './services/AuthService';
-import Home from './guards/Home';
 import DisplayerYT from "./components/YouTube/YouTubeContainer"
 import Home2 from './components/Home2/Home2';
+import Explore from './components/Explore/Explore';
+import NavBar from './components/NavBar/NavBar';
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.AuthService = new AuthService();
+    this.state = {
+      user: false,
+    }
+
   }
 
-  state = {
-    user: null,
-  }
 
   setUser = (user) => {
-    this.setState({ ...this.state, user })
+    this.setState({ ...this.state, user:user })
   }
 
   fetchUser = () => {
-    if (this.state.user === null) {
+    if (this.state.user === false) {
       this.AuthService.loggedInUser()
         .then(
           (user) => {
@@ -41,28 +43,43 @@ class App extends React.Component {
     }
   }
 
+  logout=()=>{
+    this.AuthService.logout()
+    .then(()=>{
+      this.setState({...this.state, user: false},
+        ()=>{
+          this.props.history.push('/login')
+        })
+    })
+    .catch(err=>console.log(err))
+  }
 
   componentDidMount() {
-
     this.fetchUser()
+
   }
 
   render() {
-    this.fetchUser()
+    console.log(this.state)
     const { user } = this.state;
     return (
       <div className="App">
         <header className="App-header">
+          <h1>Hola</h1>
+          <NavBar loggedInUser={this.state.user} {...this.props} user={this.state.user} logout={this.logout}/>
+
           {user && <Switch>
-            <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />
-            <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
-            <Home2 exact path="/" user={user} />
-            
+            {/* <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />
+            <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} /> */}
+            <Route exact path="/home" render={(match) => <Home2 {...match} user={this.state.user} />} />
+            <Route exact path="/explore" render={(match) => <Explore {...match} user={this.state.user} />} />
           </Switch>}
+
           {!user && <Switch>
             <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />
             <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
-         
+            {/* <Route exact path="/" render={(match) => <Redirect to={"/login"} />} /> */}
+
           </Switch>}
         </header>
       </div>
@@ -70,4 +87,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withRouter(App);

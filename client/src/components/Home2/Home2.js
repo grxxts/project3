@@ -15,7 +15,7 @@ export default class Home2 extends Component {
             user: this.props.user,
             showYT: false,
             showTwitter: false,
-            showTwitch: false
+            showTwitch: true
         };
     }
 
@@ -35,6 +35,7 @@ export default class Home2 extends Component {
     }
 
     render() {
+        console.log(this.state)
         let youtube = <React.Fragment></React.Fragment>
         if (this.state.showYT === true) {
             youtube = <YouTubeContainer></YouTubeContainer>
@@ -51,13 +52,13 @@ export default class Home2 extends Component {
 
         let twitch = <React.Fragment></React.Fragment>
         if (this.state.showTwitch === true) {
-            twitch = <TwitchDisplayer></TwitchDisplayer>
+            twitch = <TwitchDisplayer toSearch={"BeyondTheSummit_PT"}></TwitchDisplayer>
         } else {
             twitch = <React.Fragment></React.Fragment>
         }
 
         return (
-            <React.Fragment><NavBar loggedInUser={this.state.user} {...this.props} />
+            <React.Fragment>
                 <div className="rollTwitter">
                     <div className="containerStyleTwitter">
                         <button className="show-button" onClick={this.toggleShowTwitter}>{this.state.showTwitter ? 'Hide' : 'Show Twitter'}</button>

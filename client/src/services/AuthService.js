@@ -25,6 +25,13 @@ class AuthService {
     .then(res => Promise.resolve(res.data))
     .catch(error => console.error(error))
   }
+
+  logout = () => {
+    return this.instance.get('/logout')
+    .then(res => Promise.resolve(res.data))
+    .catch(error => console.error(error))
+  }
+
   
 
   upload = (picture) => {

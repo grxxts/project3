@@ -4,45 +4,54 @@ import SearchBar from '../SearchBar/SearchBar'
 
 export default class TwitchDisplayer extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
-            streamerName: ""   
+            streamerName: this.props.toSearch
         };
     }
 
-    
+
 
     handlerTitle = (channel) => {
         const streamerName = channel
-        console.log(channel)
-        
+        // console.log(channel)
+
         this.setState({
             ...this.state,
-            streamerName: streamerName        
+            streamerName: streamerName
         })
     }
-    
-    
 
 
-    
+
+
+
     componentDidMount() {
 
-        this.handlerTitle()
-       
+        // this.handlerTitle()
+
     }
 
 
-   
+
 
     render() {
-        console.log(this.state)
+        // console.log(this.state)
         return (
             <div>
                 <SearchBar className="searchBarStyle" search={(e) => this.handlerTitle(e)}></SearchBar>
-               {this.state.streamerName !== "" && <ReactTwitchEmbedVideo channel={this.state.streamerName} />}
+                {this.state.streamerName !== "" &&
+                    <ReactTwitchEmbedVideo
+                        autoplay
+                        height="280"
+                        layout="video"
+                        muted={false}
+                        targetClass="twitch-embed"
+                        width="440" channel={this.state.streamerName}
+                    />}
+               
             </div>
         )
     }
