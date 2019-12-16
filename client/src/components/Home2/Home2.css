@@ -7,3 +7,11 @@
     justify-content: space-around;
     background-color: rgba(60, 22, 85, 0.856);
   }
+
+  .show-button {
+    color:white;
+    width: 80px;
+    height: 40px;
+    border: 1px solid blue;
+    background-color: transparent;
+  }

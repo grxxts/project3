@@ -66,6 +66,7 @@ export default class TwitterContainer extends Component {
             <React.Fragment>
                 <div>
                     <ul className="tweetsList">
+                        <h3>Reading {this.props.screenname} activity</h3>
                         <SearchBar search={(e) => this.handlerTitle(e)}></SearchBar>
                             {this.state.tweets.map((tweet, idx) => {
                                 return (

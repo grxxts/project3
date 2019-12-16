@@ -11,8 +11,8 @@ export default class Home2 extends Component {
 
         this.state = {
             user: this.props.user,
-            showYT: false,
-            showTwitter: false,
+            showYT: true,
+            showTwitter: true,
             showTwitch: true
         };
     }

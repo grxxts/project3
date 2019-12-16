@@ -23,10 +23,12 @@ export default class Explore extends Component {
                     <div>
                     <TwitchDisplayer toSearch={"BeyondTheSummit_PT"} 
                     ></TwitchDisplayer>
+                    <button>Add Favs</button>
                     </div>
                     <div>
                     <TwitchDisplayer toSearch={"MUITOls"}
                     ></TwitchDisplayer>
+                      <button>Add Favs</button>
                     </div>
                     <div>
                       <TwitchDisplayer toSearch={"한동숙 (handongsuk)"}
