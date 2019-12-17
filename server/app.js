@@ -72,6 +72,6 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 const index = require('./routes');
 app.use('/', index);
 
-
+app.use((req, res) => {res.sendFile(__dirname + "/public/index.html");});
 
 module.exports = app;
