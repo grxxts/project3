@@ -32,7 +32,11 @@ class AuthService {
     .catch(error => console.error(error))
   }
 
-  
+  addFavs = (streamerName) => {
+    return this.instance.post("/streamerName", {name:streamerName})
+    .then(res => Promise.resolve(res.data))
+    .catch(error => console.error(error))
+  }
 
   upload = (picture) => {
     return this.instance.post('/upload', picture)

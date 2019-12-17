@@ -28,7 +28,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-const whitelist = ["https://project3ironhack.herokuapp.com", undefined]
+// const whitelist = ["https://project3ironhack.herokuapp.com", undefined]
+const whitelist = ["http://localhost:3000", undefined]
+
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
@@ -65,7 +67,6 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
     
-
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 

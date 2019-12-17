@@ -66,7 +66,15 @@ router.post('/signup', (req, res, next) => {
   });
 });
 
+router.post('/streamerName', (req, res, next) => {
 
+  User.findByIdAndUpdate(req.user._id,{$push:{followingPeople:req.body.name}},{new:true})
+  .then(user=>res.json(user))
+  .catch(err=>console.log(err))
+
+  
+  
+});
 
 router.post('/login', (req, res, next) => {
   passport.authenticate('local', (err, theUser, failureDetails) => {

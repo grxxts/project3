@@ -47,7 +47,7 @@ export default class NavBar extends Component {
                     <div className="dropdown">
                         <button className="dropbtn">
                             <div>
-                                <img className="userImg"  alt="userIMG" />
+                                {/* <img className="userImg" src={this.props.user.picture} alt="userIMG" /> */}
                             </div></button>
                         <div className="dropdown-content">
                             <button className="btn-logout" onClick={() => { this.props.logout() }}>Logout</button>

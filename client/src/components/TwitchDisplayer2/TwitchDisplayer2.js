@@ -42,7 +42,7 @@ export default class TwitchDisplayer extends Component {
         // console.log(this.state)
         return (
             <div className="explore-twitch">
-                <div className="displayerContainer">
+                <div>
                     <ReactTwitchEmbedVideo
                        autoplay={false}
                         height="240"
@@ -50,7 +50,7 @@ export default class TwitchDisplayer extends Component {
                         muted={true}
                         targetClass="twitch-embed"
                         width="400" channel={this.state.streamerName}
-                    />}
+                    />
                     </div>
                
             </div>

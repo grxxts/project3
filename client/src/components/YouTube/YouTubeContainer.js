@@ -3,6 +3,7 @@ import Axios from 'axios';
 import DisplayerYT from '../DisplayerYT/DisplayerYT'
 import SearchBar from '../SearchBar/SearchBar';
 import "./YouTubeContainer.css"
+import AddFavBtn from '../AddFavBtn/AddFavBtn';
 
 export default class YouTubeContainer extends Component {
 

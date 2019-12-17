@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ReactTwitchEmbedVideo from "react-twitch-embed-video"
 import SearchBar from '../SearchBar/SearchBar'
 import "./TwitchDisplayer.css"
+import AddFavBtn from '../AddFavBtn/AddFavBtn';
 
 export default class TwitchDisplayer extends Component {
 
@@ -51,10 +52,8 @@ export default class TwitchDisplayer extends Component {
                             width="940"
                             theme="dark"
                             channel={this.state.streamerName}
-
                         />
                     </div>}
-
             </div>
         )
     }
