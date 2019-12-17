@@ -42,12 +42,11 @@ export default class NavBar extends Component {
                     </div>
                 </div>
                 <div className="userStyle">
-                    {/* <h3>{this.props.user.username}</h3> */}
-
+                    <h3>{this.props.user.username}</h3>
                     <div className="dropdown">
                         <button className="dropbtn">
                             <div>
-                                {/* <img className="userImg" src={this.props.user.picture} alt="userIMG" /> */}
+                                <img className="userImg" src={this.props.user.picture} />
                             </div></button>
                         <div className="dropdown-content">
                             <button className="btn-logout" onClick={() => { this.props.logout() }}>Logout</button>

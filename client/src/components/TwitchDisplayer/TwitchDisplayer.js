@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import ReactTwitchEmbedVideo from "react-twitch-embed-video"
 import SearchBar from '../SearchBar/SearchBar'
 import "./TwitchDisplayer.css"
-import AddFavBtn from '../AddFavBtn/AddFavBtn';
 
 export default class TwitchDisplayer extends Component {
 
@@ -10,7 +9,8 @@ export default class TwitchDisplayer extends Component {
         super(props);
 
         this.state = {
-            streamerName: this.props.toSearch
+            streamerName: this.props.toSearch,
+            text: this.props.sendToFavs
         };
     }
 
@@ -27,6 +27,15 @@ export default class TwitchDisplayer extends Component {
     }
 
 
+    // showFavs = (text) => {
+    //     const text = text
+    //     this.setState({
+    //         ...this.state,
+    //         text: text
+    //     })
+    // }
+
+
     componentDidMount() {
 
         // this.handlerTitle()
@@ -40,6 +49,7 @@ export default class TwitchDisplayer extends Component {
         // console.log(this.state)
         return (
             <div className="theContainer">
+                <h1>{this.state.text}</h1>
                 <SearchBar className="searchBarStyle" search={(e) => this.handlerTitle(e)}></SearchBar>
                 {this.state.streamerName !== "" &&
                     <div className="displayerContainer">

@@ -14,8 +14,11 @@
 }
 
 .streamerFavContainer {
-    width: 40px;
+    width: 80px;
     background-color: grey;
     height: 600px;
     
+}
+h5 {
+    color: black;
 }

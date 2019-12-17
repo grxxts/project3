@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import "./SearchBar.css"
-import AddFavBtn from '../AddFavBtn/AddFavBtn'
-import DeleteFavBtn from '../DeleteFavBtn/DeleteFavBtn'
 import Authservice from "../../services/AuthService"
 
 export default class SearchBar extends Component {
@@ -40,7 +38,6 @@ export default class SearchBar extends Component {
                 <input placeholder = "my favs" className="searchBarStyle" onChange={(e) =>  this.handlerInput(e) } type="text"></input>
                 <button className="imputButton" type="submit" onClick={(e) => {this.handlerSubmit(e)}}>Search</button>
                 <button onClick={()=>this.sendToFavs()}>Add Favs</button>
-                <DeleteFavBtn></DeleteFavBtn>
             </div >
         )
     }
