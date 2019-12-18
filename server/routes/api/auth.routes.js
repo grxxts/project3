@@ -36,7 +36,6 @@ router.post('/signup', (req, res, next) => {
 
     const salt = bcrypt.genSaltSync(bcryptSalt);
     const hashPass = bcrypt.hashSync(password, salt);
-
     const newUser = new User({
       username: username,
       password: hashPass,
@@ -69,6 +68,15 @@ router.post('/signup', (req, res, next) => {
 router.post('/streamerName', (req, res, next) => {
 
   User.findByIdAndUpdate(req.user._id,{$push:{followingPeople:req.body.name}},{new:true})
+  .then(user=>res.json(user))
+  .catch(err=>console.log(err))
+   
+});
+
+router.put('/streamerName', (req, res, next) => {
+  console.log(req.body.name)
+  User.findByIdAndUpdate(req.user._id,{$pull:{followingPeople:{name:req.body.name}}})
+  console.log(followingPeople)
   .then(user=>res.json(user))
   .catch(err=>console.log(err))
    

@@ -38,6 +38,12 @@ class AuthService {
     .catch(error => console.error(error))
   }
 
+  removeFavs = (streamerName) => {
+    return this.instance.put("/streamerName", {name:streamerName})
+    .then(res => Promise.resolve(res.data))
+    .catch(error => console.error(error))
+  }
+
   upload = (picture) => {
     return this.instance.post('/upload', picture)
     .then(res => Promise.resolve(res.data))

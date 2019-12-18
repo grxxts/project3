@@ -16,7 +16,7 @@ class App extends React.Component {
 
     this.AuthService = new AuthService();
     this.state = {
-      user: false,
+      user: false
     }
 
   }
@@ -68,8 +68,8 @@ class App extends React.Component {
           <NavBar loggedInUser={this.state.user} {...this.props} user={this.state.user} logout={this.logout}/>
 
           {user && <Switch>
-            <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />
-            <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
+            {/* <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />
+            <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} /> */}
             <Route exact path="/home" render={(match) => <Home2 {...match} user={this.state.user} setUser={this.setUser}/>} />
             <Route exact path="/explore" render={(match) => <Explore {...match} user={this.state.user} />} />
             <Route exact path="/mylist" render={(match) => <MyList {...match} user={this.state.user} />} />

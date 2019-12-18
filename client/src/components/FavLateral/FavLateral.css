@@ -15,10 +15,17 @@
 
 .streamerFavContainer {
     width: 80px;
-    background-color: grey;
+    background-color: rgba(15, 14, 53, 0.609);
     height: 600px;
     
 }
 h5 {
     color: black;
+}
+
+.companyLogo {
+    width: 60px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+
 }

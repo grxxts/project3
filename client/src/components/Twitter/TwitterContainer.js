@@ -14,10 +14,9 @@ export default class TwitterContainer extends Component {
             name: "",
             screenname: "",
             loading: true
-
+            
         };
     }
-
 
 
     handlerTitle = (tweets) => {
@@ -34,7 +33,6 @@ export default class TwitterContainer extends Component {
 
     componentDidMount() {
         this.petisPutaMadre()
-
     }
 
 
