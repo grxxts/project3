@@ -39,7 +39,7 @@ class AuthService {
   }
 
   removeFavs = (streamerName) => {
-    return this.instance.put("/streamerName", {name:streamerName})
+    return this.instance.put("/streamerName", {streamerName})
     .then(res => Promise.resolve(res.data))
     .catch(error => console.error(error))
   }

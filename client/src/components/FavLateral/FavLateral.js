@@ -19,9 +19,9 @@ export default class FavLateral extends Component {
     }
 
 
-    removeFavs = () => {
-        console.log(this.state.text)
-        this.authservice.removeFavs(this.state.text)
+    removeFavs = (favName) => {
+        const streamerName = favName
+        this.authservice.removeFavs(streamerName)
         .then((res)=>{
             this.props.setUser(res)
         })
@@ -29,8 +29,6 @@ export default class FavLateral extends Component {
     }
 
     render() {
-
-        console.log(this.state.user)
         return (
             <React.Fragment>
                 <div className="followedList">
@@ -39,14 +37,11 @@ export default class FavLateral extends Component {
                         {this.state.user.followingPeople.map((followingPeople, idx) => {
                             console.log(followingPeople)
                             return (
-                                
-                                <a href="" key={idx} >{followingPeople} <button onClick={(followingPeople)=>this.removeFavs(followingPeople)}>Remove</button> </a>
-
+                                <div><a href="" key={idx} >{followingPeople} </a> <button onClick={()=>this.removeFavs({followingPeople})}>Remove</button> </div>
                             );
                         })}
                     </div>
                 </div>
-
             </React.Fragment>
         )
     }

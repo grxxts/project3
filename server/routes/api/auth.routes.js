@@ -74,9 +74,9 @@ router.post('/streamerName', (req, res, next) => {
 });
 
 router.put('/streamerName', (req, res, next) => {
-  console.log(req.body.name)
-  User.findByIdAndUpdate(req.user._id,{$pull:{followingPeople:{name:req.body.name}}})
+  const {followingPeople} = req.body.streamerName
   console.log(followingPeople)
+  User.findByIdAndUpdate(req.user._id,{$pull: { followingPeople: {$in: [followingPeople]}}}, {new: true})
   .then(user=>res.json(user))
   .catch(err=>console.log(err))
    
