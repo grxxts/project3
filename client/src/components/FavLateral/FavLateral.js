@@ -13,12 +13,16 @@ export default class FavLateral extends Component {
         };
     }
 
+    static getDerivedStateFromProps=(nextProps, prevState)=> {
+        return {user: nextProps.user}
+    }
+
     render() {
        
-        
+        console.log(this.state.user)
         return (
             <React.Fragment>
-
+            <h3>{}</h3>
             <div className="streamerFavContainer">
                 <img className="streamerPhoto" src="https://i.ytimg.com/vi/FhxlDVx5J3w/maxresdefault.jpg"></img>
             </div>

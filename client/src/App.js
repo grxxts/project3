@@ -61,7 +61,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     const { user } = this.state;
     return (
       <div className="App">
@@ -71,7 +70,7 @@ class App extends React.Component {
           {user && <Switch>
             <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />
             <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} />
-            <Route exact path="/home" render={(match) => <Home2 {...match} user={this.state.user} />} />
+            <Route exact path="/home" render={(match) => <Home2 {...match} user={this.state.user} setUser={this.setUser}/>} />
             <Route exact path="/explore" render={(match) => <Explore {...match} user={this.state.user} />} />
             <Route exact path="/mylist" render={(match) => <MyList {...match} user={this.state.user} />} />
 

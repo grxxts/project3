@@ -28,7 +28,9 @@ export default class SearchBar extends Component {
     sendToFavs = () => {
         console.log(this.state.text)
         this.authservice.addFavs(this.state.text)
-        .then((res)=>console.log(res))
+        .then((res)=>{
+            this.props.setUser(res)
+        })
         .catch(err=>console.log(err)) 
     }
 

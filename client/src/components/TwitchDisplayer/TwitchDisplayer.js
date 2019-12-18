@@ -50,7 +50,7 @@ export default class TwitchDisplayer extends Component {
         return (
             <div className="theContainer">
                 <h1>{this.state.text}</h1>
-                <SearchBar className="searchBarStyle" search={(e) => this.handlerTitle(e)}></SearchBar>
+                <SearchBar className="searchBarStyle" search={(e) => this.handlerTitle(e)} setUser={this.props.setUser}></SearchBar>
                 {this.state.streamerName !== "" &&
                     <div className="displayerContainer">
                         <ReactTwitchEmbedVideo

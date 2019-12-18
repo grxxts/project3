@@ -33,6 +33,10 @@ export default class Home2 extends Component {
         this.setState({ ...this.state, showTwitch: !showTwitch })
     }
 
+    static getDerivedStateFromProps=(nextProps, prevState)=> {
+        return {user: nextProps.user}
+    }
+
     render() {
         console.log(this.state)
         let youtube = <React.Fragment></React.Fragment>
@@ -51,7 +55,7 @@ export default class Home2 extends Component {
 
         let twitch = <React.Fragment></React.Fragment>
         if (this.state.showTwitch === true) {
-            twitch = <TwitchDisplayer toSearch={"BeyondTheSummit_PT"}></TwitchDisplayer>
+            twitch = <TwitchDisplayer toSearch={"BeyondTheSummit_PT"} setUser={this.props.setUser}></TwitchDisplayer>
         } else {
             twitch = <React.Fragment></React.Fragment>
         }
@@ -66,7 +70,7 @@ export default class Home2 extends Component {
                 </div>
                 <div className="generalContainer">
                 <div>
-                    <FavLateral></FavLateral>
+                    <FavLateral user={this.state.user}></FavLateral>
                 </div>
                     <div className="containerStyle">
                         <button className="show-button" onClick={this.toggleShowYT}>{this.state.showYT ? 'Hide' : 'Show YouTube'}</button>
