@@ -42,7 +42,7 @@ export default class NavBar extends Component {
                     </div>
                 </div>
                 <div className="userStyle">
-                    <h3>{this.props.user.username}</h3>
+                    <h5>{this.props.user.username}</h5>
                     <div className="dropdown">
                         <button className="dropbtn">
                             <div>

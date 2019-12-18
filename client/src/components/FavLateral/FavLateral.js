@@ -22,10 +22,10 @@ export default class FavLateral extends Component {
     removeFavs = (favName) => {
         const streamerName = favName
         this.authservice.removeFavs(streamerName)
-        .then((res)=>{
-            this.props.setUser(res)
-        })
-        .catch(err=>console.log(err)) 
+            .then((res) => {
+                this.props.setUser(res)
+            })
+            .catch(err => console.log(err))
     }
 
     render() {
@@ -33,11 +33,13 @@ export default class FavLateral extends Component {
             <React.Fragment>
                 <div className="followedList">
                     <div className="twitchFavsList">
-                        <img className ="companyLogo"src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Twitch_logo_%28wordmark_only%29.svg/455px-Twitch_logo_%28wordmark_only%29.svg.png"></img>
+                        <div>
+                            <img className="companyLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Twitch_logo_%28wordmark_only%29.svg/455px-Twitch_logo_%28wordmark_only%29.svg.png"></img>
+                        </div>
                         {this.state.user.followingPeople.map((followingPeople, idx) => {
                             console.log(followingPeople)
                             return (
-                                <div><a href="" key={idx} >{followingPeople} </a> <button className = "remove-btn"onClick={()=>this.removeFavs({followingPeople})}>x</button> </div>
+                                <div><a href="" key={idx} >{followingPeople} </a> <button className="remove-btn" onClick={() => this.removeFavs({ followingPeople })}>x</button> </div>
                             );
                         })}
                     </div>

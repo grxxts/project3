@@ -3,12 +3,46 @@
     margin-top: 10px;
     width: 60px;
     margin-bottom: 10px;
-    border-bottom: 1px solid white;
+    
 
 }
 
 .followedList {
-    width: 140px;
-    height: 100vh;
-    background-color: rgba(47, 27, 45, 0.486);
+    padding: 10px;
+    width: 120px;
+    height: 540px;
+    
+    border: 1px solid grey;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 10px;
+    color: white;
+}
+
+a:hover {
+    font-size: 10px;
+    color: violet
+
+}
+
+.remove-btn {
+    cursor: pointer;
+    position: relative;
+    font-size: 12px;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.remove-btn:hover {
+    cursor: pointer;
+    position: absolute;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    
+    color: red;
 }

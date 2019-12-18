@@ -46,12 +46,12 @@ export default class Home2 extends Component {
             youtube = <React.Fragment></React.Fragment>
         }
 
-        let twitter = <React.Fragment></React.Fragment>
-        if (this.state.showTwitter === true) {
-            twitter = <TwitterContainer></TwitterContainer>
-        } else {
-            twitter = <React.Fragment></React.Fragment>
-        }
+        // let twitter = <React.Fragment></React.Fragment>
+        // if (this.state.showTwitter === true) {
+        //     twitter = <TwitterContainer></TwitterContainer>
+        // } else {
+        //     twitter = <React.Fragment></React.Fragment>
+        // }
 
         let twitch = <React.Fragment></React.Fragment>
         if (this.state.showTwitch === true) {
@@ -62,23 +62,31 @@ export default class Home2 extends Component {
 
         return (
             <React.Fragment>
-                <div className="rollTwitter">
+                {/* <div>
                     <div className="containerStyleTwitter">
                         <button className="show-button" onClick={this.toggleShowTwitter}>{this.state.showTwitter ? 'X' : 'Show Twitter'}</button>
                         {twitter}
                     </div>
-                </div>
+                </div> */}
+                {/* <div className="containerStyleTwitter">
+                <TwitterContainer></TwitterContainer>
+                </div> */}
                 <div className="generalContainer">
                 <div>
                     <FavLateral user={this.state.user}></FavLateral>
                 </div>
+                    <div className="containerStyleTwitch">
+                        <button className="show-button" onClick={this.toggleShowTwitch}>{this.state.showTwitch ? 'X' : 'Show Twitch'}</button>
+                        {twitch}
+                    </div>
                     <div>
                         <button className="show-button" onClick={this.toggleShowYT}>{this.state.showYT ? 'X' : 'Show YouTube'}</button>
                         {youtube}
                     </div>
-                    <div className="containerStyle">
-                        <button className="show-button" onClick={this.toggleShowTwitch}>{this.state.showTwitch ? 'X' : 'Show Twitch'}</button>
-                        {twitch}
+                </div>
+                <div className="footer">
+                    <div>
+                    <h5>thanks for using our app</h5>
                     </div>
                 </div>
             </React.Fragment>
