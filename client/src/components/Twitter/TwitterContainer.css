@@ -2,20 +2,25 @@
 .tweetsList {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: rgba(blue);
   display: flex;
-  overflow-x: scroll;
   overflow-y: hidden;
-  width: 100%;
-  height: 150px;
+  width: 1300px;
+  height: 100px;
 }
 
 .tweetUser {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
+.theTwitterContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
 
 
 

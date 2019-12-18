@@ -37,7 +37,7 @@ export default class FavLateral extends Component {
                         {this.state.user.followingPeople.map((followingPeople, idx) => {
                             console.log(followingPeople)
                             return (
-                                <div><a href="" key={idx} >{followingPeople} </a> <button onClick={()=>this.removeFavs({followingPeople})}>Remove</button> </div>
+                                <div><a href="" key={idx} >{followingPeople} </a> <button className = "remove-btn"onClick={()=>this.removeFavs({followingPeople})}>x</button> </div>
                             );
                         })}
                     </div>

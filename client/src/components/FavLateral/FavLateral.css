@@ -1,31 +1,14 @@
-.streamerPhoto {
-    margin: 5px;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-}
-
-.streamerPhoto:hover {
-    margin: 5px;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border: 1px solid blue;
-}
-
-.streamerFavContainer {
-    width: 80px;
-    background-color: rgba(15, 14, 53, 0.609);
-    height: 600px;
-    
-}
-h5 {
-    color: black;
-}
 
 .companyLogo {
+    margin-top: 10px;
     width: 60px;
     margin-bottom: 10px;
     border-bottom: 1px solid white;
 
+}
+
+.followedList {
+    width: 140px;
+    height: 100vh;
+    background-color: rgba(47, 27, 45, 0.486);
 }

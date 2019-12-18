@@ -12,7 +12,7 @@ export default class Home2 extends Component {
 
         this.state = {
             user: this.props.user,
-            showYT: true,
+            showYT: false,
             showTwitter: true,
             showTwitch: true
         };
@@ -64,7 +64,7 @@ export default class Home2 extends Component {
             <React.Fragment>
                 <div className="rollTwitter">
                     <div className="containerStyleTwitter">
-                        <button className="show-button" onClick={this.toggleShowTwitter}>{this.state.showTwitter ? 'Hide' : 'Show Twitter'}</button>
+                        <button className="show-button" onClick={this.toggleShowTwitter}>{this.state.showTwitter ? 'X' : 'Show Twitter'}</button>
                         {twitter}
                     </div>
                 </div>
@@ -72,12 +72,12 @@ export default class Home2 extends Component {
                 <div>
                     <FavLateral user={this.state.user}></FavLateral>
                 </div>
-                    <div className="containerStyle">
-                        <button className="show-button" onClick={this.toggleShowYT}>{this.state.showYT ? 'Hide' : 'Show YouTube'}</button>
+                    <div>
+                        <button className="show-button" onClick={this.toggleShowYT}>{this.state.showYT ? 'X' : 'Show YouTube'}</button>
                         {youtube}
                     </div>
                     <div className="containerStyle">
-                        <button className="show-button" onClick={this.toggleShowTwitch}>{this.state.showTwitch ? 'Hide' : 'Show Twitch'}</button>
+                        <button className="show-button" onClick={this.toggleShowTwitch}>{this.state.showTwitch ? 'X' : 'Show Twitch'}</button>
                         {twitch}
                     </div>
                 </div>

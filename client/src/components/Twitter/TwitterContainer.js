@@ -14,7 +14,7 @@ export default class TwitterContainer extends Component {
             name: "",
             screenname: "",
             loading: true
-            
+
         };
     }
 
@@ -62,21 +62,25 @@ export default class TwitterContainer extends Component {
         console.log(this.state.loading)
         return (
             <React.Fragment>
-        
+
                 <div className="tweetUser">
-                    <div className = "reading-tweet">
+                    <div className="reading-tweet">
                     </div>
                     <div className="searchTweet">
-                    <SearchBar search={(e) => this.handlerTitle(e)}></SearchBar>
+                        <SearchBar search={(e) => this.handlerTitle(e)}></SearchBar>
                     </div>
                 </div>
+                <div className="theTwitterContainer">
                     <div className="tweetsList">
-                    {this.state.tweets.map((tweet, idx) => {
-                        return (
-                            <OneTweet key={idx} data={tweet}></OneTweet>
-                        );
-                    })}
+
+                        {this.state.tweets.map((tweet, idx) => {
+                            return (
+                                <OneTweet key={idx} data={tweet}></OneTweet>
+                            );
+                        })}
+                    </div>
                 </div>
+
             </React.Fragment>
         )
     }

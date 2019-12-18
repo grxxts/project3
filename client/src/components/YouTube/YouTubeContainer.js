@@ -4,6 +4,7 @@ import DisplayerYT from '../DisplayerYT/DisplayerYT'
 import SearchBar from '../SearchBar/SearchBar';
 import "./YouTubeContainer.css"
 
+
 export default class YouTubeContainer extends Component {
 
     constructor(props) {
@@ -34,11 +35,12 @@ export default class YouTubeContainer extends Component {
     }
 
     petisPutaMadre = () => {
+        console.log("holaaaa")
         Axios.get(`https://www.googleapis.com/youtube/v3/channels?forUsername=${this.state.channelTitle}&key=${process.env.REACT_APP_YT_KEY}&part=snippet,contentDetails,statistics,status`)
 
             .then(channel => {
                 const channelId = channel.data.items[0].id
-
+                console.log("holaaaaaaaaaaaaaaaa")
                 this.setState({
                     ...this.state,
                     loading: true,
@@ -70,7 +72,7 @@ export default class YouTubeContainer extends Component {
     }
 
     render() {
-        console.log(this.state.yVideos)
+        console.log(this.state.channelId)
         return (
             <React.Fragment onSubmit={this.handleSubmit} >
                 <div className="containerYouTube">

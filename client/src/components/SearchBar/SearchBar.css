@@ -8,7 +8,7 @@
     border-top: none;
     border-right: none;
     border-left: none;
-    
+
 }
 
 .imputButton {
@@ -16,8 +16,33 @@
     width: 90px;
     height: 30px;
     background-color: transparent;
-    border: none;  
+    border: none;
 
 }
 
+.searchBarGeneral {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 
+.favSearchBar {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.favBtn {
+    background: none;
+    border: none;
+}
+
+.favsIcon {
+    color: white;
+}

@@ -2,13 +2,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(61, 55, 63, 0.411);
+    /* background-color: rgba(61, 55, 63, 0.411); */
     width: 960px;
     height: 500px;
 }
 
-.theContainer {
-        
+/* .theContainer {
+    display: flex;
+    flex-direction: column;
     background-color: rgba(61, 55, 63, 0.411);
 
-}
+} */
