@@ -1,9 +1,14 @@
-
-.displayerTwitch2 {
-    background-color: black;
+.displayerTwitch {
     display: flex;
-    width: 800px;
-    height: 200px;
-    border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+
 }
 
+.oneDisplayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+}

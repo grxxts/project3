@@ -1,6 +1,6 @@
 .generalContainer {
   margin-top: 30px;
-  width: 100vw;
+  width: 99vw;
   height: 800px;
   display: flex;
   /* align-items: flex-start; */
@@ -11,7 +11,7 @@
 
 .containerStyleTwitter {
   background-color: #0A2234;
-  height: 100px;
+  height: 120px;
 }
 
 .containerStyleTwitch {

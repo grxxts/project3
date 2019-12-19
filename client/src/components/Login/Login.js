@@ -35,21 +35,26 @@ export default class Login extends Component {
   render() {
     const { username, password } = this.state;
     return (
+
       <div className="parentContainer">
+        {/* <div>
+          <img className="login-img" src = "https://www.laguiadelvaron.com/wp-content/uploads/2019/01/gamer_headset_screen_playing_game_tv-min.jpg"></img>
+        </div> */}
         <div className="loginContainer">
           <div className="loginElements">
+            <div className="loginTitle">
             <h1>Login</h1>
+            </div>
             <form onSubmit={this.handleLogin}>
-              <div>
+              <div className="inputStyle">
                 <label htmlFor="username">Username: </label>
                 <input type="text" name="username" value={username} onChange={this.handleChange} />
-              </div>
-              <div>
+
                 <label htmlFor="password" >Password: </label>
                 <input type="password" name="password" value={password} onChange={this.handleChange} />
               </div>
               <div>
-                <input type="submit" value="Login" />
+                <input className="inputBtn" type="submit" value="Login" />
               </div>
             </form>
           </div>

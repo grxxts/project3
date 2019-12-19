@@ -3,23 +3,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(blue);
   display: flex;
   overflow-y: hidden;
-  width: 1300px;
-  height: 100px;
+  width: 98%;
+  height: 120px;
 }
 
-.tweetUser {
+/* .tweetUser {
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .theTwitterContainer {
+  width: 99%;
   display: flex;
-  justify-content: flex-end;
-  margin-right: 20px;
+  justify-content: center;
+
 }
 
 
