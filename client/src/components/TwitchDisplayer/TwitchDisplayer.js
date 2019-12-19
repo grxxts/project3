@@ -9,14 +9,15 @@ export default class TwitchDisplayer extends Component {
         super(props);
 
         this.state = {
-            streamerName: this.props.toSearch,
-            text: this.props.sendToFavs
+            streamerName: this.props.twitchName,
+            text: this.props.sendToFavs,
         };
     }
 
 
 
     handlerTitle = (channel) => {
+        console.log(channel)
         const streamerName = channel
         // console.log(channel)
 
@@ -34,23 +35,18 @@ export default class TwitchDisplayer extends Component {
     //         text: text
     //     })
     // }
-
-
-    componentDidMount() {
-
-        // this.handlerTitle()
-
+    
+    componentWillReceiveProps() {
+        this.setState({...this.state, streamerName: this.props.twitchName})
     }
 
-
-
-
     render() {
+        console.log(this.props.twitchName)
         // console.log(this.state)
         return (
             <div className="theContainer">
                 <h1>{this.state.text}</h1>
-                <SearchBar className="searchBarStyle" search={(e) => this.handlerTitle(e)} setUser={this.props.setUser}></SearchBar>
+                <SearchBar  className="searchBarStyle" search={(e) => this.handlerTitle(e)} setUser={this.props.setUser}></SearchBar>
                 {this.state.streamerName !== "" &&
                     <div className="displayerContainer">
                         <ReactTwitchEmbedVideo

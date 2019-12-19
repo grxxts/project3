@@ -22,6 +22,7 @@ export default class SearchBar extends Component {
     handlerSubmit = (e) => {
         e.preventDefault()
         this.props.search(this.state.text)
+        // this.setState ({text: ""})
     }
 
     sendToFavs = () => {
@@ -32,6 +33,11 @@ export default class SearchBar extends Component {
             })
             .catch(err => console.log(err))
     }
+
+    static getDerivedStateFromProps = (nextProps, prevState) => {
+        return { user: nextProps.text }
+    }
+
 
     render() {
         return (

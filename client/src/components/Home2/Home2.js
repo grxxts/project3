@@ -12,10 +12,16 @@ export default class Home2 extends Component {
 
         this.state = {
             user: this.props.user,
+            text: this.props.sendToFavs,
+            text: this.props.renderTwitch,
             showYT: false,
             showTwitter: true,
-            showTwitch: true
+            showTwitch: true,
+
+            twitchName:""
         };
+
+        console.log(this.props.renderTwitch)
     }
 
     toggleShowYT = () => {
@@ -37,6 +43,21 @@ export default class Home2 extends Component {
         return {user: nextProps.user}
     }
 
+
+    static getDerivedStateFromProps=(nextProps, prevState)=> {
+        console.log(nextProps.text)
+        return {text: nextProps.text}
+
+    }
+    prueba(name){
+        this.setState({
+            ...this.state,
+            twitchName: name
+        })
+    }
+
+    
+
     render() {
         console.log(this.state)
         let youtube = <React.Fragment></React.Fragment>
@@ -55,7 +76,7 @@ export default class Home2 extends Component {
 
         let twitch = <React.Fragment></React.Fragment>
         if (this.state.showTwitch === true) {
-            twitch = <TwitchDisplayer toSearch={"BeyondTheSummit_PT"} setUser={this.props.setUser}></TwitchDisplayer>
+            twitch = <TwitchDisplayer twitchName={this.state.twitchName} toSearch={"BeyondTheSummit_PT"} setUser={this.props.setUser}></TwitchDisplayer>
         } else {
             twitch = <React.Fragment></React.Fragment>
         }
@@ -73,7 +94,7 @@ export default class Home2 extends Component {
                 </div> */}
                 <div className="generalContainer">
                 <div>
-                    <FavLateral user={this.state.user}></FavLateral>
+                    <FavLateral user={this.state.user} renderTwitch={(nm)=>this.prueba(nm)}></FavLateral>
                 </div>
                     <div className="containerStyleTwitch">
                         <button className="show-button" onClick={this.toggleShowTwitch}>{this.state.showTwitch ? 'X' : 'Show Twitch'}</button>

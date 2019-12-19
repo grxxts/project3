@@ -20,11 +20,12 @@ class App extends React.Component {
     }
 
   }
-
-
+  
   setUser = (user) => {
     this.setState({ ...this.state, user:user })
   }
+
+
 
   fetchUser = () => {
     if (this.state.user === false) {

@@ -44,6 +44,13 @@ class AuthService {
     .catch(error => console.error(error))
   }
 
+
+  renderTwtich = (streamerName) => {
+    return this.instance.post("/streamerName", {streamerName})
+    .then(res => Promise.resolve(res.data))
+    .catch(error => console.log(error))
+  }
+
   upload = (picture) => {
     return this.instance.post('/upload', picture)
     .then(res => Promise.resolve(res.data))

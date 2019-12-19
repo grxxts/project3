@@ -28,6 +28,18 @@ export default class FavLateral extends Component {
             .catch(err => console.log(err))
     }
 
+
+    renderTwitch = (followingPeople) => {
+        // console.log(followingPeople) 
+        // this.props.(this.state.text)
+        //     .then((res) => {
+        //         this.props.setUser(res)
+        //     })
+        //     .catch(err => console.loh(err))
+    }
+
+
+
     render() {
         return (
             <React.Fragment>
@@ -39,7 +51,7 @@ export default class FavLateral extends Component {
                         {this.state.user.followingPeople.map((followingPeople, idx) => {
                             console.log(followingPeople)
                             return (
-                                <div><a href="" key={idx} >{followingPeople} </a> <button className="remove-btn" onClick={() => this.removeFavs({ followingPeople })}>x</button> </div>
+                                <div><a onClick={() => this.props.renderTwitch(followingPeople)} key={idx} >{followingPeople} </a> <button className="remove-btn" onClick={() => this.removeFavs({ followingPeople })}>x</button> </div>
                             );
                         })}
                     </div>
