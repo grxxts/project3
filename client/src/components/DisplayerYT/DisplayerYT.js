@@ -13,7 +13,7 @@ export default class OneVideoYouTube extends Component{
     };
  
     return (
-      <YouTube
+      <YouTube className="youtube"
         videoId={this.props.videoId}
         opts={opts}
         onReady={this._onReady}

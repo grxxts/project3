@@ -8,9 +8,12 @@
 }
 
 .followedList {
+    margin-right: 10px;
+    border-radius: 10px;
     padding: 10px;
     width: 120px;
-    height: 580px;
+    height: auto;
+    max-height: 580px;
     background-color: rgba(61, 55, 63, 0.411);
     border: 1px solid grey;
 }

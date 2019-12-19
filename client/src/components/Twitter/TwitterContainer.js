@@ -70,9 +70,8 @@ export default class TwitterContainer extends Component {
                         <SearchBar search={(e) => this.handlerTitle(e)}></SearchBar>
                     </div>
                 </div>
-                <div className="theTwitterContainer">
+                <div className="theTwitterContainer" id ="style-1">
                     <div className="tweetsList">
-
                         {this.state.tweets.map((tweet, idx) => {
                             return (
                                 <OneTweet key={idx} data={tweet}></OneTweet>

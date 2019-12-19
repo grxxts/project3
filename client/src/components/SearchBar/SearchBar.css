@@ -11,7 +11,14 @@
 
 }
 
+.searchBarStyle:focus {
+    outline: none;
+  
+}
+
 .imputButton {
+    font-size: 14px;
+    cursor: pointer;
     color: white;
     width: 90px;
     height: 30px;
@@ -19,6 +26,18 @@
     border: none;
 
 }
+
+.imputButton:focus {
+    outline: none;
+    border: none;
+}
+
+.imputButton:hover {
+    font-size: 16px;
+    color: violet;
+}
+
+
 
 .searchBarGeneral {
     display: flex;
@@ -33,6 +52,7 @@
 }
 
 .searchContainer {
+    margin-top: 20px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
