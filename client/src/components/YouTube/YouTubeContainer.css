@@ -1,10 +1,20 @@
-.YoutubeContainerStyle {
-  height: 600px;
-  width: 700px;
-  background-color: rgba(0, 0, 0, 0.287);
+.containerYouTube {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  /* height: 350px;
+  width: 370px;
+  background-color: rgba(61, 55, 63, 0.411);
+  border: 1px solid grey; */
+
 }
 
-h3 {
+h4 {
   color: white;
 }
+
+
+
+
 

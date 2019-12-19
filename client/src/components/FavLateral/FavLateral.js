@@ -21,9 +21,13 @@ export default class FavLateral extends Component {
 
     removeFavs = (favName) => {
         const streamerName = favName
-        this.authservice.removeFavs(streamerName)
-            .then((res) => {
+        this.authservice.removeFavs(streamerName).then((res) => {
+            console.log(res)
                 this.props.setUser(res)
+                // this.setState({
+                //     ...this.state,
+                //     favName: favName
+                // })
             })
             .catch(err => console.log(err))
     }
@@ -31,16 +35,17 @@ export default class FavLateral extends Component {
 
     renderTwitch = (followingPeople) => {
         // console.log(followingPeople) 
-        // this.props.(this.state.text)
+        // this.props.render(this.state.text)
         //     .then((res) => {
         //         this.props.setUser(res)
         //     })
         //     .catch(err => console.loh(err))
     }
-
+    
 
 
     render() {
+        console.log(this.props.setUser)
         return (
             <React.Fragment>
                 <div className="followedList">

@@ -66,16 +66,19 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <NavBar loggedInUser={this.state.user} {...this.props} user={this.state.user} logout={this.logout}/>
+          {user && 
+          <React.Fragment>
+            <NavBar loggedInUser={this.state.user} {...this.props} user={this.state.user} logout={this.logout}/>
 
-          {user && <Switch>
+          <Switch>
             {/* <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />
             <Route exact path="/signup" render={(match) => <SignUp {...match} setUser={this.setUser} />} /> */}
             <Route exact path="/home" render={(match) => <Home2 {...match} user={this.state.user} setUser={this.setUser}/>} />
             <Route exact path="/explore" render={(match) => <Explore {...match} user={this.state.user} />} />
-            <Route exact path="/mylist" render={(match) => <MyList {...match} user={this.state.user} />} />
+            <Route exact path="/mylist" render={(match) => <MyList {...match} user={this.state.user} />} />  // console.log(this.state)
 
-          </Switch>}
+          </Switch>
+          </React.Fragment>}
 
           {!user && <Switch>
             <Route exact path="/login" render={(match) => <Login {...match} setUser={this.setUser} />} />

@@ -5,8 +5,8 @@ import "./DisplayerYT.css"
 export default class OneVideoYouTube extends Component{
   render() {
     const opts = {
-      height: '200px',
-      width: '420px',
+      height: '210px',
+      width: '370px',
       playerVars: { // https://developers.google.com/youtube/player_parameters
         autoplay: 0
       }

@@ -26,10 +26,9 @@ export default class SearchBar extends Component {
     }
 
     sendToFavs = () => {
-        console.log(this.state.text)
         this.authservice.addFavs(this.state.text)
             .then((res) => {
-                this.props.setUser(res)
+                this.props.setUser(res) 
             })
             .catch(err => console.log(err))
     }
@@ -40,6 +39,7 @@ export default class SearchBar extends Component {
 
 
     render() {
+        console.log(this.props)
         return (
             <React.Fragment>
                 <div className="searchContainer">

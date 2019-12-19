@@ -62,7 +62,7 @@ export default class TwitterContainer extends Component {
         console.log(this.state.loading)
         return (
             <React.Fragment>
-
+                
                 <div className="tweetUser">
                     <div className="reading-tweet">
                     </div>

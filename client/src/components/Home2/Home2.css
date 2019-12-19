@@ -3,7 +3,7 @@
   width: 100vw;
   height: 800px;
   display: flex;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   justify-content: center;
   background-color: #0A2234;
 }
@@ -16,10 +16,22 @@
 
 .containerStyleTwitch {
   display: flex;
+  justify-content: flex-start;
+  background-color: rgba(61, 55, 63, 0.411);
+  border: 1px solid grey;
+  height: 600px;
+  width: 980px;
+}
+
+
+
+.containerStyleYouTube{
+  display: flex;
+  height:385px;
+  width: 390px;
   justify-content: center;
   background-color: rgba(61, 55, 63, 0.411);
   border: 1px solid grey;
-  height: 550px;
 }
 
 .show-button {

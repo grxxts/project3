@@ -14,8 +14,8 @@ export default class Home2 extends Component {
             user: this.props.user,
             text: this.props.sendToFavs,
             text: this.props.renderTwitch,
-            showYT: false,
-            showTwitter: true,
+            showYT: true,
+            showTwitter: false,
             showTwitch: true,
 
             twitchName:""
@@ -39,16 +39,6 @@ export default class Home2 extends Component {
         this.setState({ ...this.state, showTwitch: !showTwitch })
     }
 
-    static getDerivedStateFromProps=(nextProps, prevState)=> {
-        return {user: nextProps.user}
-    }
-
-
-    static getDerivedStateFromProps=(nextProps, prevState)=> {
-        console.log(nextProps.text)
-        return {text: nextProps.text}
-
-    }
     prueba(name){
         this.setState({
             ...this.state,
@@ -56,10 +46,14 @@ export default class Home2 extends Component {
         })
     }
 
-    
+    componentWillReceiveProps(nextProps){
+        console.log(nextProps.user)
+        this.setState({...this.state, user: nextProps.user})
+    }
+
 
     render() {
-        console.log(this.state)
+        console.log(this.props.user)
         let youtube = <React.Fragment></React.Fragment>
         if (this.state.showYT === true) {
             youtube = <YouTubeContainer></YouTubeContainer>
@@ -67,40 +61,37 @@ export default class Home2 extends Component {
             youtube = <React.Fragment></React.Fragment>
         }
 
-        // let twitter = <React.Fragment></React.Fragment>
-        // if (this.state.showTwitter === true) {
-        //     twitter = <TwitterContainer></TwitterContainer>
-        // } else {
-        //     twitter = <React.Fragment></React.Fragment>
-        // }
+        let twitter = <React.Fragment></React.Fragment>
+        if (this.state.showTwitter === true) {
+            twitter = <TwitterContainer></TwitterContainer>
+        } else {
+            twitter = <React.Fragment></React.Fragment>
+        }
 
         let twitch = <React.Fragment></React.Fragment>
         if (this.state.showTwitch === true) {
-            twitch = <TwitchDisplayer twitchName={this.state.twitchName} toSearch={"BeyondTheSummit_PT"} setUser={this.props.setUser}></TwitchDisplayer>
+            twitch = <TwitchDisplayer twitchName={this.state.twitchName} toSearch={"BeyondTheSummit_PT"} setUser={this.props.setUser} ></TwitchDisplayer>
         } else {
             twitch = <React.Fragment></React.Fragment>
         }
 
         return (
             <React.Fragment>
-                {/* <div>
+                <div>
                     <div className="containerStyleTwitter">
                         <button className="show-button" onClick={this.toggleShowTwitter}>{this.state.showTwitter ? 'X' : 'Show Twitter'}</button>
                         {twitter}
                     </div>
-                </div> */}
-                {/* <div className="containerStyleTwitter">
-                <TwitterContainer></TwitterContainer>
-                </div> */}
+                </div>
                 <div className="generalContainer">
                 <div>
-                    <FavLateral user={this.state.user} renderTwitch={(nm)=>this.prueba(nm)}></FavLateral>
+                    <FavLateral user={this.state.user} renderTwitch={(nm)=>this.prueba(nm)} setUser={this.props.setUser}></FavLateral>
                 </div>
                     <div className="containerStyleTwitch">
                         <button className="show-button" onClick={this.toggleShowTwitch}>{this.state.showTwitch ? 'X' : 'Show Twitch'}</button>
                         {twitch}
                     </div>
-                    <div>
+                    <div className="containerStyleYouTube">
                         <button className="show-button" onClick={this.toggleShowYT}>{this.state.showYT ? 'X' : 'Show YouTube'}</button>
                         {youtube}
                     </div>
