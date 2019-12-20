@@ -9,6 +9,7 @@
 }
 
 .loginContainer {
+    border-radius: 15px;
     width: 400px;
     height: 450px;
     background-color: rgba(61, 55, 63, 0.411);
@@ -22,6 +23,7 @@
 }
 
 .loginElements {
+    margin-bottom: 10px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -30,6 +32,7 @@
 
 
 .login-img {
+
     width: 500px;
 }
 
@@ -37,9 +40,12 @@
 .inputStyle {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: ;
     width: 300px;
     height:40px;
     margin: 40px;
+    margin-bottom: 30px;
 }
 
 .inputBtn {
@@ -98,7 +104,7 @@
 .companyText {
     width: 330px;
     position: relative;
-    top:300px;
+    top:310px;
     right: 300px;
     color: white;
 }
