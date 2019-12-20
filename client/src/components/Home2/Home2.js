@@ -15,7 +15,7 @@ export default class Home2 extends Component {
             text: this.props.sendToFavs,
             text: this.props.renderTwitch,
             showYT: true,
-            showTwitter: false,
+            showTwitter: true,
             showTwitch: true,
 
             twitchName:""
@@ -97,8 +97,8 @@ export default class Home2 extends Component {
                     </div>
                 </div>
                 <div className="footer">
-                    <div>
-                    <h5>thanks for using our app</h5>
+                    <div className="footerText">
+                    <h5>Thanks for using our app ❤️</h5>
                     </div>
                 </div>
             </React.Fragment>

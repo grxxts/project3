@@ -9,7 +9,7 @@ export default class TwitchDisplayer extends Component {
         super(props);
 
         this.state = {
-            streamerName: this.props.twitchName,
+            streamerName: "auronplay",
             text: this.props.sendToFavs,
         };
     }

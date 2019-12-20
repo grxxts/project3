@@ -9,8 +9,8 @@
 }
 
 .loginContainer {
-    width: 30%;
-    height: 400px;
+    width: 400px;
+    height: 450px;
     background-color: rgba(61, 55, 63, 0.411);
     border: 1px solid grey;
     display: flex;
@@ -60,3 +60,45 @@
     align-items: center;
 }
 
+
+.img1 {
+    border-radius: 15px;
+    height: 250px;
+    position: relative;
+    top: 200px;
+    left: 200px;
+
+}
+
+.img2 {
+    border-radius: 15px;
+    height: 300px;
+
+}
+
+
+.collage {
+    margin-right: 200px;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    right: 120px;
+}
+
+
+.companyName {
+    font-size: 70px;
+    color: white;
+    position: relative;
+    left: 400px;
+    top: -30px
+    
+}
+
+.companyText {
+    width: 330px;
+    position: relative;
+    top:300px;
+    right: 300px;
+    color: white;
+}

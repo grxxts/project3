@@ -13,7 +13,8 @@ export default class TwitterContainer extends Component {
             tweets: [],
             name: "",
             screenname: "",
-            loading: true
+            loading: true,
+            tweetsSearch: "auronplay"
 
         };
     }

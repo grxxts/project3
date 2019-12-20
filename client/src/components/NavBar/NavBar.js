@@ -34,12 +34,15 @@ export default class NavBar extends Component {
             <div className="NavBarStyle">
                 <div className="navBarLinks">
                     <div>
+                        <h3 className ="companyLogo">Utity</h3>
+                    </div>
+                    <div>
                         <button className="btn-redirect" onClick={e => { this.re(e) }}>Home</button>
                     </div>
                     <button className="btn-redirect" onClick={e => { this.reExplore(e) }}>Explore</button>
-                    <div>
+                    {/* <div>
                         <button className="btn-redirect" onClick={e => { this.reMyList(e) }}>My List</button>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="userStyle">
                     <h5>{this.props.user.username}</h5>

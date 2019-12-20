@@ -37,13 +37,26 @@ export default class Login extends Component {
     return (
 
       <div className="parentContainer">
-        {/* <div>
-          <img className="login-img" src = "https://www.laguiadelvaron.com/wp-content/uploads/2019/01/gamer_headset_screen_playing_game_tv-min.jpg"></img>
-        </div> */}
+        <div className="collage">
+          <div>
+            <h2 className="companyName">Utity</h2>
+          </div>
+          <div>
+            <img className="img1" src="https://www.blogbankia.es/recursos/img/blog/20190529/junio2019/esports.jpg"></img>
+          </div>
+          <div>
+            <img className="img2" src="https://img.menzig.es/a/0000/420-h0.jpg"></img>
+          </div>
+          <div>
+            <h3 className="companyText">
+              The ultimate app for the streamers and gamers. Get all your favorite content in one screen, Join us!
+            </h3>
+          </div>
+        </div>
         <div className="loginContainer">
           <div className="loginElements">
             <div className="loginTitle">
-            <h1>Login</h1>
+              <h1>Login</h1>
             </div>
             <form onSubmit={this.handleLogin}>
               <div className="inputStyle">
