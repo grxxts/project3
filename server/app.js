@@ -28,8 +28,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// const whitelist = ["https://project3ironhack.herokuapp.com", undefined]
-const whitelist = ["http://localhost:3000", undefined]
+const whitelist = ["https://project3ironhack.herokuapp.com", undefined]
+// const whitelist = ["http://localhost:3000", undefined]
 
 const corsOptions = {
   origin: function (origin, callback) {
