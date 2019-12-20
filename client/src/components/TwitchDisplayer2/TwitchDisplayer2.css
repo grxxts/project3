@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 40px;
+    /* margin-left: 40px; */
+
 
 }
 
@@ -10,5 +11,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }

@@ -12,3 +12,26 @@
     margin: 20px;
 
 }
+
+
+
+.theFather #twitch-embed {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.theFather #twitch-embed iframe {
+    height: 300px;
+    width: 32.5%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.theFather #twitch-embed iframe:hover {
+    transition: 0.3s;
+    -webkit-box-shadow: 10px 10px 112px -35px rgba(255, 255, 255, 0.50);
+    -moz-box-shadow: 10px 10px 112px -35px rgba(255, 255, 255, 0.50);
+    box-shadow: 10px 10px 112px -35px rgba(255, 255, 255, 0.50);
+}

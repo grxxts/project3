@@ -17,35 +17,22 @@ export default class Explore extends Component {
     render() {
         console.log(this.props)
         return (
-            <div>
+            <div className="theFather">
                 <React.Fragment>
-                    <div className="displayerTwitch2">
-                        <div className="oneDisplayer">
+                  
+                        
                         <TwitchDisplayer2 toSearch={"한동숙 (handongsuk)"}
                         ></TwitchDisplayer2>
-                        </div>
-                        <div className="oneDisplayer">
                         <TwitchDisplayer2 toSearch={"wesg_cs"}
                         ></TwitchDisplayer2>
-                        </div>
-                        <div className="oneDisplayer">
+                        <TwitchDisplayer2 toSearch={"얍얍 (yapyap30)"}
+                        ></TwitchDisplayer2>
+                        <TwitchDisplayer2 toSearch={"BeyondTheSummit_PT"}
+                        ></TwitchDisplayer2>
+                        <TwitchDisplayer2 toSearch={"thegrefg"}
+                        ></TwitchDisplayer2>
                         <TwitchDisplayer2 toSearch={"auronplay"}
                         ></TwitchDisplayer2>
-                        </div>
-                        <div className="oneDisplayer">
-                        <TwitchDisplayer2 toSearch={"auronplay"}
-                        ></TwitchDisplayer2>
-                        </div>
-                        <div className="oneDisplayer">
-                        <TwitchDisplayer2 toSearch={"auronplay"}
-                        ></TwitchDisplayer2>
-                        </div>
-                        <div className="oneDisplayer">
-                        <TwitchDisplayer2 toSearch={"auronplay"}
-                        ></TwitchDisplayer2>
-                        </div>
-                     
-                    </div>
                 </React.Fragment>
             </div>
         )
