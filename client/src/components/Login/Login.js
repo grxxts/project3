@@ -60,11 +60,14 @@ export default class Login extends Component {
             </div>
             <form onSubmit={this.handleLogin}>
               <div className="inputStyle">
-                <label htmlFor="username">Username: </label>
-                <input type="text" name="username" value={username} onChange={this.handleChange} />
-
-                <label htmlFor="password" >Password: </label>
-                <input type="password" name="password" value={password} onChange={this.handleChange} />
+                <div className="inputLabel">
+                  <label htmlFor="username">Username: </label>
+                </div>
+                <input className="inputForm" type="text" name="username" value={username} onChange={this.handleChange} />
+                <div className="inputLabel">
+                  <label htmlFor="password" >Password: </label>
+                </div>
+                <input className="inputForm" type="password" name="password" value={password} onChange={this.handleChange} />
               </div>
               <div>
                 <input className="inputBtn" type="submit" value="Login" />

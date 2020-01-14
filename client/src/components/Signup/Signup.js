@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-
 import AuthService from '../../services/AuthService'
+import "./Signup.css" 
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ export default class SignUp extends Component {
     .then(
       (user) => {
         setUser(user);
-        history.push("/")
+        history.push("/home")
       },
       (error) => {
         console.error(error)
@@ -53,7 +53,7 @@ export default class SignUp extends Component {
       <div>
         <h1>SignUp</h1>
         <form onSubmit={this.handleSignUp}>
-          <label htmlFor="username">Username: </label>
+          <label htmlFor="username"><h4>Username:</h4></label>    
           <input type="text" name="username" value={username} required onChange={this.handleChange}/>
           <label htmlFor="password">Password: </label>
           <input type="password" value={password} name="password" required onChange={this.handleChange}/>

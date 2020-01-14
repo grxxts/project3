@@ -98,7 +98,7 @@ export default class Home2 extends Component {
                 </div>
                 <div className="footer">
                     <div className="footerText">
-                    <h5>Thanks for using our app ❤️</h5>
+                    <h5>Thanks for using our app <span>❤️</span></h5>
                     </div>
                 </div>
             </React.Fragment>
