@@ -3,15 +3,15 @@
   width: 99vw;
   height: 600px;
   display: flex;
-  /* align-items: flex-start; */
   justify-content: center;
-  background-color: rgb(11, 25, 36);
+  background-color: rgb(25, 25, 27);
 }
 
 
 .containerStyleTwitter {
   height: 120px;
   position: relative;
+  
 }
 
 .containerStyleTwitch {
@@ -19,8 +19,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: rgba(61, 55, 63, 0.411);
-  border: 1px solid grey;
+  background-color: #18181B;
+  border: 1px solid rgb(59, 58, 58);
   height: 550px;
   width: 970px;
   position:relative;
@@ -35,9 +35,10 @@
   width: 370px;
   margin-left: 8px;
   justify-content: center;
-  background-color: rgba(61, 55, 63, 0.411);
-  border: 1px solid grey;
   position: relative;
+  background-color: #18181B;
+  border: 1px solid rgb(59, 58, 58);
+
 }
 
 .show-button {
@@ -69,6 +70,3 @@
   widows: 100vw;
 }
 
-.footerText {
-  
-}

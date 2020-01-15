@@ -1,17 +1,16 @@
 
 .tweetsList {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   display: flex;
   overflow-y: hidden;
   overflow-x: auto;
   margin-top: 10px;
-  transform-origin: left top;
-  width: 98%;
+  width: 99%;
   height: 120px;
-  
   animation: move 5s linear infinite;
+
 }
 
 .theTwitterContainer {

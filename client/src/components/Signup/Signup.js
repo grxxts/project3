@@ -47,6 +47,10 @@ export default class SignUp extends Component {
       )
   }
 
+  reLogin = () => {
+    this.props.history.push('/login')
+  }
+
   render() {
     const { username, password, picture } = this.state;
     return (
@@ -64,16 +68,27 @@ export default class SignUp extends Component {
             <div className="loginTitle">
               <h3>Create account in Utity</h3>
             </div>
-          <form onSubmit={this.handleSignUp}>
-            <hr className="breaker2"></hr>
-            <label className="labelText" htmlFor="username"><h4>Username:</h4></label>
-            <input className="inputForm" type="text" name="username" value={username} required onChange={this.handleChange} />
-            <label className="labelText" htmlFor="password">Password: </label>
-            <input className="inputForm" type="password" value={password} name="password" required onChange={this.handleChange} />
-            <input type="file" name="picture" onChange={this.handleUpload} />
-            <input className="inputBtn" type="submit" value="Create account" />
-            
-          </form>
+            <form onSubmit={this.handleSignUp}>
+              <hr className="breaker2">
+              </hr>
+              <div className="inputStyle">
+                <div className="inputLabel">
+                  <label className="labelText" htmlFor="username"><h4 className="usernameText">Username:</h4></label>
+                </div>
+                <input className="inputForm" type="text" name="username" value={username} required onChange={this.handleChange} />
+                <div className="inputLabel">
+                  <label className="labelText" htmlFor="password">Password: </label>
+                </div>
+                <input className="inputForm" type="password" value={password} name="password" required onChange={this.handleChange} />
+                <div>
+                  <input className="imgUploader" type="file" name="picture" onChange={this.handleUpload} />
+                </div>
+              </div>
+              <input className="inputBtn" type="submit" value="Create account" />
+              <div>
+                <button className="btnToLogin" onClick={e => { this.reLogin(e) }}>Have already an account?</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

@@ -3,7 +3,6 @@
     margin-top: 10px;
     width: 60px;
     margin-bottom: 10px;
-    
 
 }
 
@@ -14,9 +13,9 @@
     width: 120px;
     height: auto;
     max-height: 580px;
-    background-color: rgba(61, 55, 63, 0.411);
-    border: 1px solid grey;
-}
+    background-color: #18181B;
+    border: 1px solid rgb(59, 58, 58);
+  }
 
 a {
     font-size: 12px;
