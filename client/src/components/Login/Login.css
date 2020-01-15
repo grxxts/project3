@@ -1,18 +1,17 @@
-
 .parentContainer {
+    background-image: url(https://trello-attachments.s3.amazonaws.com/5dee44377e4ecb8a78a5deb2/5e1ef9c4a61c7603bc67e640/927ade7af52378673866cdbc39271712/login-background-utity.svg);
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: center; 
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .loginContainer {
     border-radius: 15px;
     width: 400px;
     height: 450px;
-    /* background-color: rgba(61, 55, 63, 0.411); */
-    border: 1px solid grey;
+    background-color: rgb(20, 20, 22);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -34,7 +33,6 @@
     width: 500px;
 }
 
-
 .inputStyle {
 
     display: flex;
@@ -43,10 +41,6 @@
     margin-top: 10px;
     justify-content: center;
     align-items: flex-start;
-}
-
-.inputStyle label{
-    margin-bottom: 20px;
 }
 
 
@@ -58,20 +52,21 @@
 }
 
 .inputLabel {
-    margin: 10px  0px;
+    margin: 10px 0px;
 }
+
 
 .inputBtn {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    color: white;  
-    margin-top: 40px; 
+    color: white;
+    margin-top: 40px;
     width: 300px;
     height: 40px;
     background-color: ·;
     background-color: #006f94;
-    border-color:#006f94;
+    border-color: #006f94;
 }
 
 .inputBtn:hover {
@@ -86,53 +81,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -22px;
 }
 
-
-.img1 {
-    border-radius: 15px;
-    height: 250px;
-    position: relative;
-    top: 200px;
-    left: 200px;
-    
-
-}
-
-.img2 {
-    border-radius: 15px;
-    height: 300px;
-
-}
-
-
-.collage {
-    margin-right: 200px;
-    position: absolute;
-    display: flex;
-    justify-content: flex-start;
-    right: 120px;
-}
-
-
-.companyName {
-    font-size: 70px;
-    color: white;
-    position: relative;
-    left: 400px;
-    top: -30px
-    
-}
-
-.companyText {
-    width: 330px;
-    position: relative;
-    top:310px;
-    right: 300px;
-    color: white;
-}
 
 h1 {
     font-size: 40px;
+}
+
+
+h2 {
+
+    font-size: 60px;
+    color: white;
+}
+
+.copyBranding {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    max-width: 700px;
+    
+}
+
+span {
+    color: #5A4192;
+}
+
+.utityLogoFinal {
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.copyText {
+    display: flex;
+    margin-top: -30px;
+        
 }

@@ -37,26 +37,18 @@ export default class Login extends Component {
     return (
 
       <div className="parentContainer">
-        <div className="collage">
-          <div>
-            <h2 className="companyName">Utity</h2>
+        <div className="copyBranding">
+          <div className="copyText">
+            <h2>Discover your app for watch your favorite <span>content on screen</span></h2>
           </div>
-          <div>
-            <img className="img1" src="https://www.blogbankia.es/recursos/img/blog/20190529/junio2019/esports.jpg"></img>
-          </div>
-          <div>
-            <img className="img2" src="https://img.menzig.es/a/0000/420-h0.jpg"></img>
-          </div>
-          <div>
-            <h3 className="companyText">
-              The ultimate app for the streamers and gamers. Get all your favorite content in one screen, Join us!
-            </h3>
+          <div className="utityLogoFinal">
+            <img src="https://trello-attachments.s3.amazonaws.com/5dee44377e4ecb8a78a5deb2/5e1ef7904cc7bd6f6344d725/ca1cba45d27595583e657ef494ff431b/logo-utity-final.svg"></img>
           </div>
         </div>
         <div className="loginContainer">
           <div className="loginElements">
             <div className="loginTitle">
-              <h1>Login</h1>
+              <h3>Inicia sesión en Utity</h3>
             </div>
             <form onSubmit={this.handleLogin}>
               <div className="inputStyle">
