@@ -1,3 +1,165 @@
-h1 {
+.parentContainer {
+    background-image: url(https://trello-attachments.s3.amazonaws.com/5dee44377e4ecb8a78a5deb2/5e1ef9c4a61c7603bc67e640/927ade7af52378673866cdbc39271712/login-background-utity.svg);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.loginContainer {
+    border-radius: 15px;
+    width: 400px;
+    height: 450px;
+    background-color: rgb(25, 25, 27);
+    box-shadow: 2px 4px rgb(31, 31, 32);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    margin-right: 80px;
+}
+
+.loginContainer:hover {
+    box-shadow: 2px 4px rgb(51, 51, 53);
+}
+
+.loginElements {
+    margin-bottom: 10px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.login-img {
+    width: 500px;
+}
+
+.inputStyle {
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.inputForm {
+    border-radius: 5px;
+    width: 300px;
+    height: 30px;
+    border: none;
+}
+
+.inputLabel {
+    margin: 10px 0px;
+}
+
+
+.inputBtn {
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    margin-top: 40px;
+    width: 300px;
+    height: 40px;
+    background-color: ·;
+    background-color: #006f94;
+    border-color: #006f94;
+}
+
+.inputBtn:hover {
+    cursor: pointer;
+    color: white;
+    background-color:#014d66;
+    border-color: #014d66;
+}
+
+
+.loginTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    font-size: 40px;
+}
+
+
+h2 {
+
+    font-size: 60px;
+    color: white;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+.copyBranding {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    max-width: 700px;
+    
+}
+
+span {
+    color: #5A4192;
+}
+
+.utityLogoFinal {
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.copyText {
+    display: flex;
+    margin-top: -30px;
+        
+}
+
+.btnToSignup {
+    color: rgb(105, 84, 151);
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 20px;
+    border: none;
+    background-color: transparent;
+    width: 260px;
+    height: 20px;
+}
+
+.btnToSignup:hover {
+    color: white;
+}
+
+.breaker {
+    margin-top: 20px;
+    border: 0.7px solid rgb(83, 83, 83);
+    
+}
+
+.breaker2 {
+    margin-top: 20px;
+    border: 0.7px solid rgb(83, 83, 83);
+    
+}
+
+.labelText {
+    font-size: 12px;
+   
 }

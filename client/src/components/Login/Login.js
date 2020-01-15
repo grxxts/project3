@@ -30,6 +30,12 @@ export default class Login extends Component {
           console.error(error)
         }
       )
+
+  }
+
+
+  reSignup = () => {
+    this.props.history.push('/signup')
   }
 
   render() {
@@ -39,7 +45,7 @@ export default class Login extends Component {
       <div className="parentContainer">
         <div className="copyBranding">
           <div className="copyText">
-            <h2>Discover your app for watch your favorite <span>content on screen</span></h2>
+            <h2>Discover the app for watch your favorite <span>content on screen</span></h2>
           </div>
           <div className="utityLogoFinal">
             <img src="https://trello-attachments.s3.amazonaws.com/5dee44377e4ecb8a78a5deb2/5e1ef7904cc7bd6f6344d725/ca1cba45d27595583e657ef494ff431b/logo-utity-final.svg"></img>
@@ -48,21 +54,28 @@ export default class Login extends Component {
         <div className="loginContainer">
           <div className="loginElements">
             <div className="loginTitle">
-              <h3>Inicia sesión en Utity</h3>
+              <h3>Iniciar sesión en  U t i t y</h3>
             </div>
             <form onSubmit={this.handleLogin}>
+            <hr className="breaker2">
+            </hr>
               <div className="inputStyle">
                 <div className="inputLabel">
-                  <label htmlFor="username">Username: </label>
+                  <label className="labelText" htmlFor="username">Username: </label>
                 </div>
                 <input className="inputForm" type="text" name="username" value={username} onChange={this.handleChange} />
                 <div className="inputLabel">
-                  <label htmlFor="password" >Password: </label>
+                  <label className="labelText" htmlFor="password" >Password: </label>
                 </div>
                 <input className="inputForm" type="password" name="password" value={password} onChange={this.handleChange} />
               </div>
               <div>
                 <input className="inputBtn" type="submit" value="Login" />
+              </div>
+              <hr className="breaker">
+              </hr>
+              <div>
+                <button className="btnToSignup" onClick={e => { this.reSignup(e) }}>or create account</button>
               </div>
             </form>
           </div>

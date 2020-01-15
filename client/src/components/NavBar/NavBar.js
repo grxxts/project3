@@ -26,6 +26,8 @@ export default class NavBar extends Component {
         this.props.history.push('/explore')
     }
 
+    
+
 
 
     render() {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import AuthService from '../../services/AuthService'
-import "./Signup.css" 
+import "./Signup.css"
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -16,50 +16,66 @@ export default class SignUp extends Component {
 
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({...this.state, [name]:value})
+    this.setState({ ...this.state, [name]: value })
   }
   handleSignUp = (e) => {
     e.preventDefault()
     const { history, setUser } = this.props;
     this.AuthService.signup(this.state)
-    .then(
-      (user) => {
-        setUser(user);
-        history.push("/home")
-      },
-      (error) => {
-        console.error(error)
-      }
-    )
+      .then(
+        (user) => {
+          setUser(user);
+          history.push("/home")
+        },
+        (error) => {
+          console.error(error)
+        }
+      )
   }
 
   handleUpload = (e) => {
     const uploadData = new FormData();
     uploadData.append('picture', e.target.files[0])
     this.AuthService.upload(uploadData)
-    .then(
-      (data) => {
-        this.setState({...this.state, picture: data.secure_url})
-      },
-      (error) => {
-        console.error(error)
-      }
-    )
+      .then(
+        (data) => {
+          this.setState({ ...this.state, picture: data.secure_url })
+        },
+        (error) => {
+          console.error(error)
+        }
+      )
   }
 
   render() {
     const { username, password, picture } = this.state;
     return (
-      <div>
-        <h1>SignUp</h1>
-        <form onSubmit={this.handleSignUp}>
-          <label htmlFor="username"><h4>Username:</h4></label>    
-          <input type="text" name="username" value={username} required onChange={this.handleChange}/>
-          <label htmlFor="password">Password: </label>
-          <input type="password" value={password} name="password" required onChange={this.handleChange}/>
-          <input type="file" name="picture" onChange={this.handleUpload} />
-          <input type="submit" value="Create account"/>
-        </form>
+      <div className="parentContainer">
+        <div className="copyBranding">
+          <div className="copyText">
+            <h2>Discover the app for watch your favorite <span>content on screen</span></h2>
+          </div>
+          <div className="utityLogoFinal">
+            <img src="https://trello-attachments.s3.amazonaws.com/5dee44377e4ecb8a78a5deb2/5e1ef7904cc7bd6f6344d725/ca1cba45d27595583e657ef494ff431b/logo-utity-final.svg"></img>
+          </div>
+        </div>
+        <div className="loginContainer">
+          <div className="loginElements">
+            <div className="loginTitle">
+              <h3>Create account in Utity</h3>
+            </div>
+          <form onSubmit={this.handleSignUp}>
+            <hr className="breaker2"></hr>
+            <label className="labelText" htmlFor="username"><h4>Username:</h4></label>
+            <input className="inputForm" type="text" name="username" value={username} required onChange={this.handleChange} />
+            <label className="labelText" htmlFor="password">Password: </label>
+            <input className="inputForm" type="password" value={password} name="password" required onChange={this.handleChange} />
+            <input type="file" name="picture" onChange={this.handleUpload} />
+            <input className="inputBtn" type="submit" value="Create account" />
+            
+          </form>
+          </div>
+        </div>
       </div>
     )
   }
