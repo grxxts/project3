@@ -116,6 +116,11 @@ span {
     color: #5A4192;
 }
 
+.spanStyle2 {
+    font-size: 60px;
+    color: white;
+}
+
 .utityLogoFinal {
     width: 90px;
     display: flex;

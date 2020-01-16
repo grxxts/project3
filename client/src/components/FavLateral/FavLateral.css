@@ -6,6 +6,12 @@
 
 }
 
+.favLateral {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
 .followedList {
     margin-right: 10px;
     border-radius: 10px;

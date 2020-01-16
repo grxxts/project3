@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import "./NavBar.css"
-import { Link } from 'react-router-dom'
 
 export default class NavBar extends Component {
 
@@ -26,7 +25,7 @@ export default class NavBar extends Component {
         this.props.history.push('/explore')
     }
 
-    
+
 
 
 
@@ -35,16 +34,14 @@ export default class NavBar extends Component {
         return (
             <div className="NavBarStyle">
                 <div className="navBarLinks">
-                    <div>
-                        <h3 className ="companyLogo">Utity</h3>
+                    <div className="utityLogo">
+                    <img src="https://trello-attachments.s3.amazonaws.com/5dee44377e4ecb8a78a5deb2/5e1ef7904cc7bd6f6344d725/ca1cba45d27595583e657ef494ff431b/logo-utity-final.svg"></img>
+
                     </div>
                     <div>
                         <button className="btn-redirect" onClick={e => { this.re(e) }}>Home</button>
                     </div>
                     <button className="btn-redirect" onClick={e => { this.reExplore(e) }}>Explore</button>
-                    {/* <div>
-                        <button className="btn-redirect" onClick={e => { this.reMyList(e) }}>My List</button>
-                    </div> */}
                 </div>
                 <div className="userStyle">
                     <h5>{this.props.user.username}</h5>
@@ -63,5 +60,3 @@ export default class NavBar extends Component {
     }
 }
 
-
-// src={this.props.user.picture}

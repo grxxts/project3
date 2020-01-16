@@ -17,8 +17,6 @@ export default class TwitchDisplayer extends Component {
 
     handlerTitle = (channel) => {
         const streamerName = channel
-        // console.log(channel)
-
         this.setState({
             ...this.state,
             streamerName: streamerName
@@ -27,28 +25,16 @@ export default class TwitchDisplayer extends Component {
 
 
 
-
-
-    componentDidMount() {
-
-        // this.handlerTitle()
-
-    }
-
-
-
-
     render() {
-        // console.log(this.state)
         return (
                    
                     <ReactTwitchEmbedVideo className ="displayer2"
                         autoplay={false}
-                        height="240"
+                        height="220"
                         layout="video"
                         muted={true}
                         targetClass="twitch-embed"
-                        width="400" channel={this.state.streamerName}
+                        width="300" channel={this.state.streamerName}
                     />
                   
         )

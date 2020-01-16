@@ -57,7 +57,7 @@ export default class SignUp extends Component {
       <div className="parentContainer">
         <div className="copyBranding">
           <div className="copyText">
-            <h2>Discover the app for watch your favorite <span>content on screen</span></h2>
+            <h2><span className="spanStyle2">Discover the app for watch your favorite <span className="spanStyle">content on screen</span></span></h2>
           </div>
           <div className="utityLogoFinal">
             <img src="https://trello-attachments.s3.amazonaws.com/5dee44377e4ecb8a78a5deb2/5e1ef7904cc7bd6f6344d725/ca1cba45d27595583e657ef494ff431b/logo-utity-final.svg"></img>

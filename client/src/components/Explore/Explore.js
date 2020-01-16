@@ -9,10 +9,8 @@ export default class Explore extends Component {
 
         this.state = {
             user: this.props.user,
-
         };
     }
-
 
     render() {
         console.log(this.props)
@@ -32,6 +30,18 @@ export default class Explore extends Component {
                         <TwitchDisplayer2 toSearch={"thegrefg"}
                         ></TwitchDisplayer2>
                         <TwitchDisplayer2 toSearch={"auronplay"}
+                        ></TwitchDisplayer2>
+                          <TwitchDisplayer2 toSearch={"GamesDoneQuick"}
+                        ></TwitchDisplayer2>
+                          <TwitchDisplayer2 toSearch={"Pestily."}
+                        ></TwitchDisplayer2>
+                          <TwitchDisplayer2 toSearch={"xQcOW"}
+                        ></TwitchDisplayer2>
+                          <TwitchDisplayer2 toSearch={"summit1g"}
+                        ></TwitchDisplayer2>
+                          <TwitchDisplayer2 toSearch={"Castro_1021"}
+                        ></TwitchDisplayer2>
+                          <TwitchDisplayer2 toSearch={"loltyler1"}
                         ></TwitchDisplayer2>
                 </React.Fragment>
             </div>

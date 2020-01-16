@@ -8,14 +8,11 @@ export default class OneTweet extends Component {
 
         this.state = {
             tweets: props.tweets
-            
         };
     }
 
     render() {
         return (
-
-
             <div className="eachTweet">
                 <p className="twitter-created">{this.props.data.created_at}</p>
                 <p className="twitter-text"> {this.props.data.text}</p>

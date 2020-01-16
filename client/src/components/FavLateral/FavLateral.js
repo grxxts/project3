@@ -23,26 +23,15 @@ export default class FavLateral extends Component {
         const streamerName = favName
         this.authservice.removeFavs(streamerName).then((res) => {
             console.log(res)
-                this.props.setUser(res)
-                // this.setState({
-                //     ...this.state,
-                //     favName: favName
-                // })
-            })
+            this.props.setUser(res)
+        })
             .catch(err => console.log(err))
     }
 
 
     renderTwitch = (followingPeople) => {
-        // console.log(followingPeople) 
-        // this.props.render(this.state.text)
-        //     .then((res) => {
-        //         this.props.setUser(res)
-        //     })
-        //     .catch(err => console.loh(err))
-    }
-    
 
+    }
 
     render() {
         console.log(this.props.setUser)
@@ -51,12 +40,18 @@ export default class FavLateral extends Component {
                 <div className="followedList">
                     <div className="twitchFavsList">
                         <div>
-                            <img className="companyLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Twitch_logo_%28wordmark_only%29.svg/455px-Twitch_logo_%28wordmark_only%29.svg.png"></img>
+                            <h4>Fav Streamers</h4>
+                            <hr className="breaker"></hr>
                         </div>
                         {this.state.user.followingPeople.map((followingPeople, idx) => {
                             console.log(followingPeople)
                             return (
-                                <div><a onClick={() => this.props.renderTwitch(followingPeople)} key={idx} >{followingPeople} </a> <button className="remove-btn" onClick={() => this.removeFavs({ followingPeople })}>x</button> </div>
+                                <div className="favLateral">
+                                    <div className="twitchRender"><a onClick={() => this.props.renderTwitch(followingPeople)} key={idx} >{followingPeople} </a>
+                                    </div>
+                                    <div className="removeContainer"> <button className="remove-btn" onClick={() => this.removeFavs({ followingPeople })}>x</button>
+                                    </div>
+                                </div>
                             );
                         })}
                     </div>

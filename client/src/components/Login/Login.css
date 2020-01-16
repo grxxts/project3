@@ -112,7 +112,8 @@ h3 {
     
 }
 
-span {
+.spanStyle {
+    font-size: 60px;
     color: #5A4192;
 }
 
