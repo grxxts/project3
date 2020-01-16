@@ -1,10 +1,10 @@
 .generalContainer {
-  margin-top: 30px;
+  margin-top: 40px;
   width: 99vw;
   height: 600px;
   display: flex;
   justify-content: center;
-  background-color: rgb(25, 25, 27);
+  background-color: rgb(20, 20, 20);
 }
 
 
@@ -44,22 +44,27 @@
 .show-button {
   margin-top: 5px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   color: white;
-  width: 30px;
+  width: 50px;
   height: 20px;
   border: none;
   background-color: transparent;
   position:absolute;
-  top: 5px;
-  left: 5px;
+  top: 2px;
+  left: 2px;
 }
 
 .show-button:hover {
-  color: red;
+  color:#5A4192;
   font-size: 14px;
 }
 
+
+.show-button:focus {
+  outline: none;
+  border: none;
+}
 .footer {
 
   display: flex;
@@ -68,5 +73,9 @@
   background-color: black;
   height: 100px;
   widows: 100vw;
+}
+
+.closeComponent {
+  color: rgb(88, 25, 25);
 }
 
